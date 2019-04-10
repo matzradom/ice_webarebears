@@ -18,6 +18,20 @@ bot.on('message' , function(message){
     }
 });
 
+bot.on('message' , function(message){
+    if(message.content == bot.user + 'chill')
+    {
+        message.channel.sendMessage("Matz chiiiiillllll.");
+    }
+});
+
+bot.on('message' , function(message){
+    if(message.content == bot.user + 'Chill')
+    {
+        message.channel.sendMessage("Xenon chiiiiillllll.");
+    }
+});
+
 
 bot.on('message' , function(message){
     if(message.content == 'Bully')
