@@ -133,7 +133,7 @@ bot.on('message' , function(message){
   });
 //-------------------------TEXT COMMANDS END---------------------------//
 
-bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3sow.cow6PG4QnHbYxzdoT47uKw7YIfI');
+bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
     bot.user.setGame('with twigs.')
   })
