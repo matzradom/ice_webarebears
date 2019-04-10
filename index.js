@@ -21,7 +21,14 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content == 'Bully')
     {
-        message.channel.sendMessage("Stop bullying Matz.");
+        message.channel.sendMessage("Xenon stop bullying Matz.");
+    }
+});
+
+bot.on('message' , function(message){
+    if(message.content == 'bully')
+    {
+        message.channel.sendMessage("Matz stop bullying Xenon.");
     }
 });
 
