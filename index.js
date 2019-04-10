@@ -71,7 +71,7 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content == "pubg?")
     {
-        var response = icetag[Math.floor(Math.random()*pubg.length)]
+        var response = pubg[Math.floor(Math.random()*pubg.length)]
         message.channel.sendMessage(message.author + response).then().catch(console.error);
     }
 });
