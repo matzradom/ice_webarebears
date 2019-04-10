@@ -9,6 +9,7 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 
 var xenon = ["Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["How bored can you be that you tag me for no reason?", "I don't know what you want. Srsly.", "I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
+var xenon = ["No.", "Play alone.", "I'm sick, I can't carry heavy loads."];
 
 bot.on('message' , function(message){
     if(message.content == bot.user + 'Hello')
@@ -52,12 +53,28 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content == bot.user + ' Wake up Matz')
     {
-        message.channel.sendMessage('Mom, ' + message.author + 'wants you to wake up. I know, ' + message.author + ' sucks.');
+        message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
     }
 
   
 });
 
+bot.on('message' , function(message){
+    if(message.content == bot.user + ' Wake up matz')
+    {
+        message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
+    }
+
+  
+});
+
+bot.on('message' , function(message){
+    if(message.content == "pubg?")
+    {
+        var response = icetag[Math.floor(Math.random()*pubg.length)]
+        message.channel.sendMessage(message.author + response).then().catch(console.error);
+    }
+});
 
 bot.on('message' , function(message){
     if(message.content == bot.user)
