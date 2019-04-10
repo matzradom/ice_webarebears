@@ -6,7 +6,7 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 bot.on('message' , function(message){
     if(message.content == 'help cmds')
     {
-        message.channel.sendMessage("Hi hooman, here are my commands, use them wisely.\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
+        message.channel.sendMessage("Hi hooman, here are my commands, use them wisely.\n\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
     }
 });
 
