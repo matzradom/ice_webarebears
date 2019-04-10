@@ -60,7 +60,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + ' Wake up matz')
+    if(message.content == bot.user + ' wake up matz')
     {
         message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
     }
