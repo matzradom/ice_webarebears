@@ -19,14 +19,14 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + 'chill')
+    if(message.content == 'chill')
     {
         message.channel.sendMessage("Matz chiiiiillllll.");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + 'Chill')
+    if(message.content == 'Chill')
     {
         message.channel.sendMessage("Xenon chiiiiillllll.");
     }
