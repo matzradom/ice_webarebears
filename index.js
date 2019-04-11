@@ -190,11 +190,11 @@ bot.on('message' , function(message){
     {
         if (message.mentions.users.first() == null)
         {
-            message.channel.sendMessage(message.author " dm "+ message.mentions.users.first() + " what?);
+            return;
         }
             
         message.delete();
-        message.mentions.users.first().sendMessage(message.content.slice (24));)
+        message.mentions.users.first().sendMessage(message.content.slice (24));
 
     }
 });
