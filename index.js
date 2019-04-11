@@ -128,6 +128,18 @@ bot.on('message' , function(message){
       }
   });
 
+  bot.on('message', message => {
+        if (message.content.toLowerCase() == "help cmds") {
+   
+      const embed = new RichEmbed()
+       
+        .setColor(0xB6B6B6)
+        .setDescription("Moderation Commands")
+                           .addField("trial text asdf asdfla asdff ffdsa")
+                          
+        message.channel.send(embed);
+      }
+  });
 
   bot.on('message', message => {
      if(message.content.toLowerCase() == 'hello info'){
