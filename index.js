@@ -3,19 +3,6 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 
-bot.on('message' , function(message){
-    if(message.content.toLowerCase() == message.mentions.users.first() +'null help cmds')
-    {
-        message.channel.sendMessage(message.mentions.users.first() + "Hi hooman, here are my commands, use them wisely.\n\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
-    }
-});
-
-bot.on('message' , function(message){
-    if(message.content.toLowerCase() == 'help cmds null')
-    {
-        message.channel.sendMessage("Hi hooman, here are my commands, use them wisely.\n\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
-    }
-});
 
 
 //-------------------------TEXT COMMANDS END---------------------------//
@@ -110,7 +97,7 @@ bot.on('message' , function(message){
     }
 });
 
-
+//-------------------------HELP COMMANDS---------------------------//
   bot.on('message', message => {
         if (message.content.toLowerCase() == "help cmds") {
    
@@ -118,7 +105,7 @@ bot.on('message' , function(message){
        
         .setTitle('Commands')
         .setColor(0xFF0000)
-        .setDescription("\n"+"hello,bully,chill,info")
+        .setDescription("\n"+"hello,bully,chill,info,rules")
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
         .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -149,7 +136,7 @@ bot.on('message' , function(message){
         .setTitle('hello')
         .setColor(0xFF0000)
         .setDescription("Receive a greeting back from me.")
-        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+         .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -165,7 +152,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("I will ask the person bullying you to stop.")
             .addField("Usage","@mentionbully bully")
-        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -177,11 +164,11 @@ bot.on('message' , function(message){
       
            const embed = new RichEmbed()
        
-        .setTitle('bully')
+        .setTitle('chill')
         .setColor(0xFF0000)
         .setDescription("I will ask the mentioned person to chill.")
             .addField("Usage","@mentionperson chill")
-        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+         .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -193,16 +180,100 @@ bot.on('message' , function(message){
       
            const embed = new RichEmbed()
        
-        .setTitle('bully')
+        .setTitle('info')
         .setColor(0xFF0000)
         .setDescription("Learn more about me with this command")
             .addField("Usage","@tagme info")
-        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
       }
   });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'matz info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('matz')
+        .setColor(0xFF0000)
+        .setDescription("Who is Matz?")
+            .addField("Usage","@tagme matz")
+         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'xenon info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('xenon')
+        .setColor(0xFF0000)
+        .setDescription("Who is Xenon?")
+            .addField("Usage","@tagme xenon")
+         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'pubg? info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('xenon')
+        .setColor(0xFF0000)
+        .setDescription("Maybe I wanna play pubg?")
+            .addField("Usage","pubg?")
+         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'wake up matz info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('xenon')
+        .setColor(0xFF0000)
+        .setDescription("Let's try to wake up Matz, shall we?")
+            .addField("Usage","wake up matz")
+        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'rules info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('xenon')
+        .setColor(0xFF0000)
+        .setDescription("Check out the rules fam! Don't get baned now.")
+            .addField("Usage","rules,@mention rules,dm @mention rules")
+        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+
+//-------------------------HELP COMMANDS END---------------------------//
+
+//-------------------------RULES---------------------------//
 
 bot.on('message', message => {
         if (message.content.toLowerCase() == "rules") {
@@ -229,11 +300,21 @@ bot.on('message', message => {
        
         .setTitle('Rules')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.mentions.users.first()+".")
-                                .addField("There are no rules.","Will add rules soon.")
+        //.setDescription("Hi " + message.mentions.users.first()+".")
+                                      .addField("Rule 1.","Will add rules soon.")
+                                      .addField("Rule 2.","Will add rules soon.")
+                                      .addField("Rule 3.","Will add rules soon.")
+                                      .addField("Rule 4.","Will add rules soon.")
+                                      .addField("Rule 5.","Will add rules soon.")
+                                      .addField("Rule 6.","Will add rules soon.")
+                                      .addField("Rule 7.","Will add rules soon.")
+                                      .addField("Rule 8.","Will add rules soon.")
+                                      .addField("Rule 9.","Will add rules soon.")
+                                      .addField("Rule 10.","Will add rules soon.")
+      
                    
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
       }
@@ -256,6 +337,9 @@ bot.on('message', message => {
          message.mentions.users.first().sendMessage(embed);
       }
   });
+
+//-------------------------RULES END---------------------------//
+
 
 
   bot.on('message', message => {
