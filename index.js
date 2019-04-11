@@ -120,11 +120,11 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile.")
-        .setFooter("Please dm matz for errors with my commands.")
+        .setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
-          }
+      }
   });
 
   bot.on('message', message => {
