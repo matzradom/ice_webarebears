@@ -151,6 +151,15 @@ bot.on('message' , function(message){
   });
 //-------------------------TEXT COMMANDS END---------------------------//
 
+//-------------------------DM COMMANDS---------------------------//
+
+if (message.content.toLowerCase() == message.mentions.users.first() + " quiet"
+    message.delete();
+    message.content.slice(8);
+    message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
+
+//-------------------------DM COMMANDS END---------------------------//
+
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
     bot.user.setGame('with twigs.')
