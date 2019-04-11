@@ -120,7 +120,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("hello",
-                                 "- Get a greeting back from me.\n\n")
+                                 "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
                                  "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
