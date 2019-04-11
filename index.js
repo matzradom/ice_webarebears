@@ -136,7 +136,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == "dm" + message.mentions.users.first() + ' help cmds'){
+     if(message.content.toLowerCase() == "dm " message.mentions.users.first() + ' help cmds'){
          
       const embed = new RichEmbed()
        
