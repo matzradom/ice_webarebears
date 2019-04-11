@@ -119,6 +119,9 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
+      
+        .setImage("https://i.ibb.co/b66hkMt/head.png")
+      
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("https://i.ibb.co/b66hkMt/head.png")
                                 .addField("hello",
