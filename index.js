@@ -69,7 +69,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' wru')
+    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' info')
     {
         message.channel.sendMessage("Hey " + message.mentions.users.first() + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
@@ -127,6 +127,9 @@ bot.on('message' , function(message){
       
                                 .addField("chill",
                                  "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
+      
+                                 .addField("chill",
+                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
                    
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -179,6 +182,17 @@ bot.on('message' , function(message){
 //-------------------------TEXT COMMANDS END---------------------------//
 
 //-------------------------DM COMMANDS---------------------------//
+
+if(message.content.toLowerCase().startswith ("dm"))
+    {
+        if (mention == null){return;}
+        message.delete();
+        mentionMessage = message.content.slice
+        mention.sendMessage(message.content.slice (8));
+
+    }
+});
+
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
