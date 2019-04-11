@@ -15,7 +15,7 @@ bot.on('message' , function(message){
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = [" How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
-
+var msg = message.content.toLowerCase();
 
 bot.on('message' , function(message){
     if(msg == bot.user + ' hello')
@@ -55,14 +55,14 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + ' matz')
+    if(msg == bot.user + ' matz')
     {
         message.channel.sendMessage("Matz? My mom, my creator.");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + ' wru')
+    if(msg == bot.user + ' wru')
     {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
@@ -71,7 +71,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + ' wake up matz')
+    if(msg == bot.user + ' wake up matz')
     {
         message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
     }
@@ -81,7 +81,7 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(message.content == "pubg?")
+    if(msg == "pubg?")
     {
         var response = pubg[Math.floor(Math.random()*pubg.length)]
         message.channel.sendMessage(message.author + response).then().catch(console.error);
@@ -97,7 +97,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content == bot.user + ' xenon')
+    if(msg == bot.user + ' xenon')
     {
         var response = xenon[Math.floor(Math.random()*xenon.length)]
         message.channel.sendMessage(response).then().catch(console.error);
@@ -107,7 +107,7 @@ bot.on('message' , function(message){
 
   bot.on('message', message => {
     // If the message is "how to embed"
-    if (message.content == bot.user + ' sotd') {
+    if (msg == bot.user + ' sotd') {
       // We can create embeds using the MessageEmbed constructor
       // Read more about all that you can do with the constructor
       // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
@@ -128,7 +128,7 @@ bot.on('message' , function(message){
 
   bot.on('message', message => {
     // If the message is "how to embed"
-    if (message.content == bot.user + ' sotd info') {
+    if (msg == bot.user + ' sotd info') {
       // We can create embeds using the MessageEmbed constructor
       // Read more about all that you can do with the constructor
       // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
