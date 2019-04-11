@@ -131,7 +131,7 @@ bot.on('message' , function(message){
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
       
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
         
          .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -160,7 +160,7 @@ bot.on('message' , function(message){
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
       
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
@@ -190,7 +190,7 @@ bot.on('message' , function(message){
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
       
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
                    
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
