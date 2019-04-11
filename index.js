@@ -153,13 +153,17 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS---------------------------//
 
-if (message.content.toLowerCase() == message.mentions.users.first() + " quiet")
-{
-    message.delete();
-    message.content.slice(8);
-    message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
-    
-};
+bot.on('message' , function(message){
+    if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
+    {
+        message.channel.sendMessage("Hello Hooman, what's up?");
+        message.delete();
+        message.content.slice(8);
+        message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
+    }
+});
+
+
 
 //-------------------------DM COMMANDS END---------------------------//
 
