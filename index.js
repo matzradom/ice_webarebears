@@ -40,7 +40,7 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == 'bully')
+    if(message.content.toLowerCase() == message.mentions.users.first() + ' bully')
     {
         message.channel.sendMessage(message.author + " stop bullying "+ message.mentions.users.first() + ".");
     }
