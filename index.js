@@ -127,7 +127,7 @@ bot.on('message' , function(message){
                        +
                         "<:PinkPepeCoin:564324653644906502>" + " no need to tag me.\n\n\n"
                        +
-                        "<:PinkPepeCoin:564324653644906502>" + "*hello* - Get a greeting back from me.
+                        "<:PinkPepeCoin:564324653644906502>" + "*hello* - Get a greeting back from me."
                         +
                          "<:PinkPepeCoin:564324653644906502>" + "*bully* - Ok ok, I'll ask the person to stop bullying you.\n```@mention bully``` so I know which person is bullying you, I can't read minds."
                        )
