@@ -183,7 +183,7 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS---------------------------//
 bot.on('message' , function(message){
-    if(message.content.toLowerCase().startswith ("dm"))
+    if(message.content.toLowerCase().startsWith ("dm"))
     {
         if (mention == null){return;}
         message.delete();
