@@ -54,7 +54,7 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(msg == bot.user + ' matz')
+    if(message.content == bot.user + ' matz')
     {
         message.channel.sendMessage("Matz? My mom, my creator.");
     }
