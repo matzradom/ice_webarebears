@@ -121,13 +121,13 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n"
                        +
-                        "__*Legend**__\n"
+                        "__**Legend**__\n"
                        +
                         "Here is the legend for the commands.\n\n"
                        +
-                        "<:idle:550070014863212563>"+" tag me first after the command followed by a space.\n"
+                        <:idle:550070014863212563>+" tag me first after the command followed by a space.\n"
                        +
-                        "<:online:550070013881745428>"+" no need to tag me.\n\n"
+                        <:online:550070013881745428>+" no need to tag me.\n\n"
                        )
         //.setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
