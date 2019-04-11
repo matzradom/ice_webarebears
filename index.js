@@ -194,7 +194,7 @@ bot.on('message' , function(message){
         }
             
         message.delete();
-        message.mentions.users.first().sendMessage(message.content.slice (24));
+        message.mentions.users.first().sendMessage(message.content.slice (29));
 
     }
 });
