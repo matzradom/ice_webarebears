@@ -145,7 +145,7 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-        //.setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+        .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("hello",
                                  "- Get a greeting back from me.\n\n")
                       
