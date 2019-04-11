@@ -144,6 +144,22 @@ bot.on('message' , function(message){
       }
   });
 
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'bully info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('bully')
+        .setColor(0xFF0000)
+        .setDescription("I will ask the person bullying you to stop.")
+            .addFields("Usage","  '@mentionbully bully"
+        .setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
 bot.on('message', message => {
         if (message.content.toLowerCase() == "rules") {
    
