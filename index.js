@@ -169,10 +169,10 @@ bot.on('message', message => {
    
       const embed = new RichEmbed()
        
-        .setTitle('i c e 。 Commands')
+        .setTitle('Rules')
         .setColor(0xFF0000)
         //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                                .addField("There are no rules.")
+                                .addField("There are no rules.","")
                    
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -187,7 +187,7 @@ bot.on('message', message => {
    
       const embed = new RichEmbed()
        
-        .setTitle('i c e 。 Commands')
+        .setTitle('Rules')
         .setColor(0xFF0000)
         //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("There are no rules.")
@@ -212,7 +212,7 @@ bot.on('message', message => {
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
-         message.message.mentions.users.first().sendMessage(embed);
+         message.mentions.users.first().sendMessage(embed);
       }
   });
 
