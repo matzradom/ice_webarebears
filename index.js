@@ -119,15 +119,15 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+        //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("hello",
                                  "- Get a greeting back from me.\n\n")
                       
                                 .addField("bully",
-                                 "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully so I know who is bullying you.```", true)
+                                 "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
       
                                 .addField("chill",
-                                 "- Someone needs to chill?\n"+   "```@mention chill so I know who is <:supermeatblob:565003802772766740>.```")
+                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
                    
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
