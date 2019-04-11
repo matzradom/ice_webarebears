@@ -119,10 +119,10 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n"
-                       
-                       +
-                        "**hello**\n - Get a greeting back from me.\n\n"
+        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+                       .setFieldName("hello")
+                      
+                        .setFieldDescription("**hello**\n - Get a greeting back from me.\n\n
                        +
                          "**bully**\n - Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully so I know who is bullying you.```"
                        +
