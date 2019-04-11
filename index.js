@@ -120,16 +120,11 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n"
+                       
                        +
-                       "__**Legend**__\n"
-                       +
-                        "<:XenonsPepeCoin:564276735487508491>" + " tag me first after the command followed by a space.\n"
-                       +
-                        "<:PinkPepeCoin:564324653644906502>" + " no need to tag me.\n\n\n"
-                       +
-                        "<:PinkPepeCoin:564324653644906502>" + "*hello* - Get a greeting back from me."
+                        "**hello** - Get a greeting back from me.\n"
                         +
-                         "<:PinkPepeCoin:564324653644906502>" + "*bully* - Ok ok, I'll ask the person to stop bullying you.\n```@mention bully``` so I know which person is bullying you, I can't read minds."
+                         "**bully** - Ok ok, I'll ask the person to stop bullying you.\n```***@mention bully*** so I know which person is bullying you, I can't read minds.```"
                        )
         //.setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
