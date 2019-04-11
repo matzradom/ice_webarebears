@@ -122,9 +122,9 @@ bot.on('message' , function(message){
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n"
                        
                        +
-                        "**hello** - Get a greeting back from me.\n"
+                        "**hello** - Get a greeting back from me.\n\n"
                         +
-                         "**bully** - Ok ok, I'll ask the person to stop bullying you.\n```***@mention bully*** so I know which person is bullying you, I can't read minds.```"
+                         "**bully**\n - Ok ok, I'll ask the person to stop bullying you.\n  `***@mention bully***` so I know which person is bullying you, I can't read minds."
                        )
         //.setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
