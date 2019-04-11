@@ -149,9 +149,9 @@ bot.on('message' , function(message){
         .setTitle('hello')
         .setColor(0xFF0000)
         .setDescription("Receive a greeting back from me.")
-        .setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        .setTimestamp(new Date())
+        //.setTimestamp(new Date())
          message.channel.send(embed);
       }
   });
@@ -164,10 +164,42 @@ bot.on('message' , function(message){
         .setTitle('bully')
         .setColor(0xFF0000)
         .setDescription("I will ask the person bullying you to stop.")
-            .addField("Usage","  '@mentionbully bully")
-        .setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","@mentionbully bully")
+        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        .setTimestamp(new Date())
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'chill info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('bully')
+        .setColor(0xFF0000)
+        .setDescription("I will ask the mentioned person to chill.")
+            .addField("Usage","@mentionperson chill")
+        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+  bot.on('message', message => {
+     if(message.content.toLowerCase() == 'info info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('bully')
+        .setColor(0xFF0000)
+        .setDescription("Learn more about me with this command")
+            .addField("Usage","@tagme info")
+        //.setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
          message.channel.send(embed);
       }
   });
