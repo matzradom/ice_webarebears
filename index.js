@@ -61,7 +61,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + ' wru')
+    if(message.content.toLowerCase() == bot.user + ' info')
     {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
@@ -165,7 +165,7 @@ bot.on('message' , function(message){
   });
 
 bot.on('message', message => {
-        if (message.content.toLowerCase() == " rules") {
+        if (message.content.toLowerCase() == "rules") {
    
       const embed = new RichEmbed()
        
@@ -195,7 +195,7 @@ bot.on('message', message => {
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
-         message.channel.send(message.mention.users.first() + " " + embed);
+         message.channel.send(message.mentions.users.first() + " " + embed);
       }
   });
 
