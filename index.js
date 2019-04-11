@@ -32,34 +32,26 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content == 'chill')
+    if(message.content.toLowerCase() == message.mentions.users.first() + ' chill')
     {
-        message.channel.sendMessage("Matz chiiiiillllll.");
-    }
-});
-
-bot.on('message' , function(message){
-    if(message.content == 'Chill')
-    {
-        message.channel.sendMessage("Xenon chiiiiillllll.");
+        message.channel.sendMessage(message.mentions.users.first() + " chiiiiillllll.");
     }
 });
 
 
 bot.on('message' , function(message){
-    if(message.content == 'Bully')
+    if(message.content.toLowerCase() == 'bully')
     {
-        message.channel.sendMessage("Xenon stop bullying Matz.");
+        message.channel.sendMessage(message.author + " stop bullying "+ message.mentions.users.first() + ".");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content == 'bully')
+    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' matz')
     {
-        message.channel.sendMessage("Matz stop bullying Xenon.");
+        message.channel.sendMessage(message.mentions.users.first() + "Matz? My mom, my creator.");
     }
 });
-
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == bot.user + ' matz')
@@ -73,8 +65,15 @@ bot.on('message' , function(message){
     {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
+ 
+});
 
-  
+bot.on('message' , function(message){
+    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' wru')
+    {
+        message.channel.sendMessage("Hey " + message.mentions.users.first() + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
+    }
+ 
 });
 
 bot.on('message' , function(message){
