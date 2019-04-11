@@ -138,6 +138,8 @@ bot.on('message' , function(message){
       }
   });
 
+
+
   bot.on('message', message => {
      if(message.content.toLowerCase() == "dm " + message.mentions.users.first() + ' help cmds'){
          
@@ -183,7 +185,19 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS---------------------------//
 
+bot.on('message' , function(message){
+    if(message.content.toLowerCase().startsWith ("dm"))
+    {
+        if (message.mentions.users.first() == null)
+        {
+            return;
+        }
+            
+        message.delete();
+        message.mentions.users.first().sendMessage(message.content.slice (24));
 
+    }
+});
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
