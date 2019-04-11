@@ -185,9 +185,9 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase().startsWith ("dm"))
     {
-        if (message.mention.users.first() == null){return;}
+        if (message.mentions.users.first() == null){return;}
         message.delete();
-        message.mention.users.first().sendMessage(message.content.slice (8));
+        message.mentions.users.first().sendMessage(message.content.slice (8));
 
     }
 });
