@@ -156,7 +156,8 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
     {
-        message.channel.sendMessage(message.mentions.users.first() + " Kkay, " + message.mentions.users.first() + " dmed a warning to " + message.mentions.users.first());
+        message.delete(10);
+        message.channel.sendMessage("Kkay, " + message.author + " dmed a warning to " + message.mentions.users.first());
         message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
     }
 });
