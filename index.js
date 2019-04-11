@@ -190,7 +190,7 @@ bot.on('message' , function(message){
     {
         if (message.mentions.users.first() == null)
         {
-            return;
+            message.channel.sendMessage(message.author " dm "+ message.mentions.users.first() + " what?);
         }
             
         message.delete();
