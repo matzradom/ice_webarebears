@@ -187,7 +187,7 @@ bot.on('message' , function(message){
     {
         if (message.mentions.users.first() == null){return;}
         message.delete();
-        message.mentions.users.first().sendMessage(message.content.slice (8));
+        message.mentions.users.first().sendMessage(message.content.slice (24));
 
     }
 });
