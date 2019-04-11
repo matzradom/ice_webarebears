@@ -188,7 +188,6 @@ bot.on('message' , function(message){
         if (message.mentions.users.first() == null){
             message.channel.sendMessage(message.author " dm "+ message.mentions.users.first() + " what?);}
             
-        message.channel.send();}
         message.delete();
         message.mentions.users.first().sendMessage(message.content.slice (24));
 
