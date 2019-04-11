@@ -121,7 +121,7 @@ bot.on('message' , function(message){
       const embed = new RichEmbed()
         .setTitle("Moderation Commands")
         .setColor(0xB6B6B6)
-        .setDescription("Moderation Commands")
+        .setDescription("Here are commands for mods blahhhhh")
                            .addField("Add rules","trial text blaaahh")
                           
         message.channel.send(embed);
@@ -310,7 +310,7 @@ bot.on('message', message => {
        
         .setTitle('Rules')
         .setColor(0xFF0000)
-        //.setDescription("Hi " + message.mentions.users.first()+".")
+        .setDescription("Hi " + message.mentions.users.first()+".")
                                       .addField("Rule 1.","Will add rules soon.")
                                       .addField("Rule 2.","Will add rules soon.")
                                       .addField("Rule 3.","Will add rules soon.")
