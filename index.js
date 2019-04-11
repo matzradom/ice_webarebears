@@ -119,11 +119,7 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-      
-        .setImage("https://i.ibb.co/b66hkMt/head.png")
-      
-        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                                .addField("https://i.ibb.co/b66hkMt/head.png")
+        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")                           .addField("https://i.ibb.co/b66hkMt/head.png")
                                 .addField("hello",
                                  "- Get a greeting back from me.\n\n")
                       
@@ -133,8 +129,8 @@ bot.on('message' , function(message){
                                 .addField("chill",
                                  "- Someone needs to chill?\n"+   "```@mention chill so I know who is <:supermeatblob:565003802772766740>.```")
                    
-        //.setFooter()
-        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
       }
