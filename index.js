@@ -11,7 +11,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == 'help cmds')
+    if(message.content.toLowerCase() == 'help cmds null')
     {
         message.channel.sendMessage("Hi hooman, here are my commands, use them wisely.\n\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
     }
@@ -112,23 +112,18 @@ bot.on('message' , function(message){
 
 
   bot.on('message', message => {
-    // If the message is "how to embed"
-    if (message.content.toLowerCase() == bot.user + ' sotd') {
-      // We can create embeds using the MessageEmbed constructor
-      // Read more about all that you can do with the constructor
-      // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+    
+    if (message.content.toLowerCase() == "help cmds") {
+   
       const embed = new RichEmbed()
-        // Set the title of the field
-        .setTitle('A lot to learn by Luke Christopher')
-        // Set the color of the embed
+       
+        .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.author + " [click here](https://www.youtube.com/watch?v=k9elZm_EH_4) to listen to the song of the day.\n'SOTD info' to know more about the song.")
-        .setFooter("Always tag me first before every command")
-        .setImage("https://img.youtube.com/vi/k9elZm_EH_4/maxresdefault.jpg")
-        // Set the main content of the embed
+        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile.")
+        .setFooter("Please dm matz for errors with my commands.")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
-      // Send the embed to the same channel as the message
-      message.channel.send(embed);
+         message.channel.send(embed);
           }
   });
 
