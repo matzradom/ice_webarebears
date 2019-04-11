@@ -4,7 +4,7 @@ const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == message.mentions.users.first() +'help cmds')
+    if(message.content.toLowerCase() == message.mentions.users.first() +'null help cmds')
     {
         message.channel.sendMessage(message.mentions.users.first() + "Hi hooman, here are my commands, use them wisely.\n\n```Here are the commands that will need you to tag me first followed by a space.\n\n hello \n   - You will be receiving the best greeting in the world.\n\n Chill \n   - WIll ask Matz to chill.\n\n chill \n   - Will ask Xenon to chill.\n\n Bully \n   - Will ask Xenon to stop bullying Matz.\n\n bully \n   - WIll axk Matz to stop bullying Xenon.```");
     }
@@ -136,7 +136,8 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-   
+     if(message.content.toLowerCase() == "dm" + message.mentions.users.first() + ' help cmds'){
+         
       const embed = new RichEmbed()
        
         .setTitle('i c e 。 Commands')
