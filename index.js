@@ -124,7 +124,7 @@ bot.on('message' , function(message){
                        +
                         "**hello** - Get a greeting back from me.\n\n"
                         +
-                         "**bully**\n - Ok ok, I'll ask the person to stop bullying you.\n  `***@mention bully***` so I know which person is bullying you, I can't read minds."
+                         "**bully**\n - Ok ok, I'll ask the person to stop bullying you.\n    ```@mention bully so I know which person is bullying you, I can't read minds.```"
                        )
         //.setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
