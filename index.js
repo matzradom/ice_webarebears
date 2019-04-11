@@ -130,7 +130,8 @@ bot.on('message' , function(message){
       
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
-      
+                           .addBlankField(true)
+                           .addBlankField(true)
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
         
          .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -148,7 +149,7 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                                .addField("hello",
+                           .addField("hello",
                                  "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
@@ -159,7 +160,8 @@ bot.on('message' , function(message){
       
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
-      
+                           .addBlankField(true)
+                           .addBlankField(true)
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -177,8 +179,7 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                                
-                                .addField("hello",
+                           .addField("hello",
                                  "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
@@ -189,7 +190,8 @@ bot.on('message' , function(message){
       
                                  .addField("info",
                                  "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
-      
+                           .addBlankField(true)
+                           .addBlankField(true)
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
                    
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
