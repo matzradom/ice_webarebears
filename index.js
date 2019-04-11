@@ -130,33 +130,14 @@ bot.on('message' , function(message){
 
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == "dm " + message.mentions.users.first() + ' help cmds'){
-      
-      message.delete();
-      const embed = new RichEmbed()
-       
-        .setTitle('Commands')
-        .setColor(0xFF0000)
-        .setDescription("\n"+"hello,bully,chill,info")
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
-                          
-        .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        .setTimestamp(new Date())
-         message.channel.send(embed);
-      }
-  });
-
-  bot.on('message', message => {
      if(message.content.toLowerCase() == 'hello info'){
       
-      message.delete();
-      const embed = new RichEmbed()
+           const embed = new RichEmbed()
        
         .setTitle('hello')
         .setColor(0xFF0000)
         .setDescription("Receive a greeting back from me.")
-        .setFooter("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
@@ -267,7 +248,7 @@ bot.on('message' , function(message){
 
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
-    bot.user.setGame('with twigs.|help cmds')
+    bot.user.setGame('with twigs. | help cmds')
   })
 
   bot.on('ready',function(){
