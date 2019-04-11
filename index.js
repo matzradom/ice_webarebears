@@ -164,7 +164,7 @@ bot.on('message' , function(message){
         .setTitle('bully')
         .setColor(0xFF0000)
         .setDescription("I will ask the person bullying you to stop.")
-            .addFields("Usage","  '@mentionbully bully"
+            .addFields("Usage","  '@mentionbully bully")
         .setFooter("","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
