@@ -171,7 +171,7 @@ bot.on('message', message => {
        
         .setTitle('Rules')
         .setColor(0xFF0000)
-        //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+        .setDescription("Hi " + message.author +".")
                                 .addField("There are no rules.","Will add rules soon.")
                    
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -189,7 +189,7 @@ bot.on('message', message => {
        
         .setTitle('Rules')
         .setColor(0xFF0000)
-        //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+        .setDescription("Hi " + message.mentions.users.first()+".")
                                 .addField(message.mentions.users.first() + "There are no rules.","Will add rules soon.")
                    
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -206,7 +206,7 @@ bot.on('message', message => {
        
         .setTitle('Rules')
         .setColor(0xFF0000)
-        //.setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+        .setDescription("Hi " + message.mentions.users.first()+".")
                                 .addField("There are no rules.","Will add rules soon.")
                    
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
