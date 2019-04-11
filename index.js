@@ -125,9 +125,9 @@ bot.on('message' , function(message){
                        +
                         "Here is the legend for the commands.\n\n"
                        +
-                        <:idle:550070014863212563>+" tag me first after the command followed by a space.\n"
+                        "<:XenonsPepeCoin:564276735487508491>" + " tag me first after the command followed by a space.\n"
                        +
-                        <:online:550070013881745428>+" no need to tag me.\n\n"
+                        "<:PinkPepeCoin:564324653644906502>" + " no need to tag me.\n\n"
                        )
         //.setFooter()
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
