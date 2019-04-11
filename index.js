@@ -119,7 +119,7 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                                .addField("hello",
+                           .addField("hello",
                                  "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
@@ -128,10 +128,12 @@ bot.on('message' , function(message){
                                 .addField("chill",
                                  "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
       
-                                 .addField("chill",
-                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
-                   
-        .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+                                 .addField("info",
+                                 "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
+      
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
+        
+         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
@@ -147,7 +149,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
                                 .addField("hello",
-                                 "- Get a greeting back from me.\n\n")
+                                 "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
                                  "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
@@ -155,9 +157,10 @@ bot.on('message' , function(message){
                                 .addField("chill",
                                  "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
       
-                                 .addField("chill",
-                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
-                   
+                                 .addField("info",
+                                 "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
+      
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
@@ -174,14 +177,20 @@ bot.on('message' , function(message){
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
+                                
                                 .addField("hello",
-                                 "- Get a greeting back from me.\n\n")
+                                 "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
                       
                                 .addField("bully",
                                  "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
       
                                 .addField("chill",
                                  "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
+      
+                                 .addField("info",
+                                 "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
+      
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz)
                    
         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -294,7 +303,7 @@ bot.on('message' , function(message){
 
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
-    bot.user.setGame('with twigs with Matz.')
+    bot.user.setGame('with twigs.|help cmds')
   })
 
   bot.on('ready',function(){
