@@ -167,7 +167,8 @@ bot.on('message' , function(message){
 
   bot.on('message', message => {
      if(message.content.toLowerCase() == "dm " + message.mentions.users.first() + ' help cmds'){
-         
+      
+      message.delete();
       const embed = new RichEmbed()
        
         .setTitle('i c e 。 Commands')
@@ -226,7 +227,8 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if (message.content.toLowerCase() == "dm " + message.mentions.users.first() + " rules") {
-   
+      
+      message.delete();
       const embed = new RichEmbed()
        
         .setTitle('Rules')
@@ -292,7 +294,7 @@ bot.on('message' , function(message){
 
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
-    bot.user.setGame('with twigs.')
+    bot.user.setGame('with twigs with Matz.')
   })
 
   bot.on('ready',function(){
