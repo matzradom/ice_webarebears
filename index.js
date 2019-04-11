@@ -116,44 +116,31 @@ bot.on('message' , function(message){
    
       const embed = new RichEmbed()
        
-        .setTitle('i c e 。 Commands')
+        .setTitle('Commands')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.author + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                           .addBlankField(true)
-                           .addField("hello",
-                                 "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
-                      
-                                .addField("bully",
-                                 "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
-      
-                                .addField("chill",
-                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
-      
-                                 .addField("info",
-                                 "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
-                           .addBlankField(true)
-                           
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
-                           .addBlankField(true)
-         .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setDescription("\n"+"hello,bully,chill,info")
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
+                          
+        .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
       }
   });
+
 
   bot.on('message', message => {
         if (message.content.toLowerCase() == message.mentions.users.first() + " help cmds") {
    
       const embed = new RichEmbed()
        
-        .setTitle('i c e 。 Commands')
+        .setTitle('Commands')
         .setColor(0xFF0000)
         .setDescription("\n"+"hello,bully,chill,info")
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
-        .setFooter("\nhelp cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
       }
@@ -165,32 +152,18 @@ bot.on('message' , function(message){
       message.delete();
       const embed = new RichEmbed()
        
-        .setTitle('i c e 。 Commands')
+        .setTitle('Commands')
         .setColor(0xFF0000)
-        .setDescription("Hi " + message.mentions.users.first() + " these are my commands, please use them wisely, I'm fragile, and fat.\n\n")
-                           .addBlankField(true)
-                           .addField("hello",
-                                 "- Get a greeting back from me.\n" + "Tag me first tho so I know you're actually talking to me.")
-                      
-                                .addField("bully",
-                                 "- Ok ok, I'll ask the person to stop bullying you.\n"+   "```@mention bully, so I know who is bullying you.```", true)
-      
-                                .addField("chill",
-                                 "- Someone needs to chill?\n"+   "```@mention chill, so I know who needs a chill pill.```")
-      
-                                 .addField("info",
-                                 "- Learn more about me fam\n"+   "```tag me + cmd```\n\n")
-                           .addBlankField(true)
+        .setDescription("\n"+"hello,bully,chill,info")
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
-                           .addBlankField(true)
-                   
-        .setFooter("help cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
-         message.mentions.users.first().sendMessage(embed);
+         message.channel.send(embed);
       }
   });
+
 
 bot.on('message', message => {
         if (message.content.toLowerCase() == "rules") {
