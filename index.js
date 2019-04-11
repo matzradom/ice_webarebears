@@ -333,7 +333,7 @@ bot.on('message', message => {
 bot.on('message', message => {
         if (message.content.toLowerCase() == "dm " + message.mentions.users.first() + " rules") {
       
-      message.delete();
+      message.delete(1000);
       const embed = new RichEmbed()
        
         .setTitle('Rules')
