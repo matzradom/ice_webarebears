@@ -186,7 +186,7 @@ bot.on('message' , function(message){
 //-------------------------DM COMMANDS---------------------------//
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase().startsWith ("dm"))
+    if(message.content.toLowerCase().startsWith ("whisper"))
     {
         if (message.mentions.users.first() == null)
         {
