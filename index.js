@@ -193,7 +193,7 @@ bot.on('message' , function(message){
             return;
         }
             
-        message.delete(10);
+        message.delete(1);
         message.mentions.users.first().sendMessage(message.content.slice (29));
 
     }
