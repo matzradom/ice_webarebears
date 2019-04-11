@@ -149,8 +149,8 @@ bot.on('message' , function(message){
        
         .setTitle('i c e 。 Commands')
         .setColor(0xFF0000)
-        .setDescription("hello,bully,chill,info")
-                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz")
+        .setDescription("\n"+"hello,bully,chill,info")
+                           .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
         .setFooter("\nhelp cmds to see cmds", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
