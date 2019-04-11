@@ -42,14 +42,14 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == message.mentions.users.first() + ' bully')
     {
-        message.channel.sendMessage(message.author + " stop bullying "+ message.mentions.users.first() + ".");
+        message.channel.sendMessage(message.mentions.users.first() + " stop bullying " + message.author + ".");
     }
 });
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' matz')
     {
-        message.channel.sendMessage(message.mentions.users.first() + "Matz? My mom, my creator.");
+        message.channel.sendMessage(message.mentions.users.first() + " Matz? My mom, my creator.");
     }
 });
 
