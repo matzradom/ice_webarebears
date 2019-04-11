@@ -182,17 +182,7 @@ bot.on('message' , function(message){
 //-------------------------TEXT COMMANDS END---------------------------//
 
 //-------------------------DM COMMANDS---------------------------//
-bot.on('message' , function(message){
-    if(message.content.toLowerCase().startsWith ("dm"))
-    {
-        if (message.mentions.users.first() == null){
-            message.channel.sendMessage(message.author " dm "+ message.mentions.users.first() + " what?);}
-            
-        message.delete();
-        message.mentions.users.first().sendMessage(message.content.slice (24));
 
-    }
-});
 
 
 bot.on('message' , function(message){
