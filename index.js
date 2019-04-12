@@ -11,6 +11,7 @@ var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", 
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
 var bears = ["https://i.pinimg.com/236x/cf/a2/78/cfa2780926f72cc26a83d17bd03a47b1.jpg", "https://i.pinimg.com/564x/d6/53/ce/d653ce37b5d00a5bb2ce6cf60da01799.jpg" , "https://i.pinimg.com/564x/a8/8b/29/a88b29a65568564eccbb70e943f82147.jpg", "https://i.pinimg.com/564x/0a/37/95/0a37956a47bc006459e343c4b8a7b87b.jpg", "https://i.pinimg.com/564x/d0/99/ff/d099ff7afa62ff9f0416d81ccebf5831.jpg", "https://i.pinimg.com/564x/72/cc/3d/72cc3d7f04e8357a8719d47828333fda.jpg", "https://i.pinimg.com/564x/f9/d1/9d/f9d19d58faa0cdaf63489219864f7e72.jpg"]
+var beartext =["Raaaaawwrrrrr", "I'm more adorable than you." , "Beaaaaaaaaaaaaaaar" , "B- b- buh beaar"]
 let pref = ["ice "];
 const cooldown = new Set();
    
@@ -106,12 +107,9 @@ bot.on('message' , function(message){
        
         .setTitle('Rawwwrrr')
         .setColor(0xFF0000)
-        //.setDescription("\n"+"hello,bully,chill,whisper,info,rules")
-                           .                          
-       
-        .setImage(bears)
-        //.setTimestamp(new Date())
-        message.channel.send(embed).then().catch(console.error);
+         
+        .setImage('bears')
+         message.channel.send(embed).then().catch(console.error);
     }
 });
 
@@ -265,7 +263,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == pref + 'pubg? info'){
+     if(message.content.toLowerCase() == pref + 'send bear info'){
       
            const embed = new RichEmbed()
        
