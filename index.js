@@ -5,12 +5,39 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 
 
 
-//-------------------------TEXT COMMANDS END---------------------------//
+//-------------------------TEXT COMMANDS--------------------------//
 
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
 let pref = ["ice "];
+let cooldown = new Set();
+let cdseconds = 5;
+
+bot.on('message' , function(message){
+if(message.content.startsWith(prefix + "hello"))
+{
+    cooldown.add(message.author.id);
+}
+});
+
+bot.on('message' , function(message){
+ if(cooldown.has(message.author.id))
+     
+{
+   message.delete();
+    const embed = new RichEmbed()
+       
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("You have 5 seconds till you can use this command. ")
+            //.addField("Usage","whisper @mention 'your message here'.")
+       //.setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+}
+});
 
 bot.on('message' , function(message){
     if(message.content == pref + 'hello')
