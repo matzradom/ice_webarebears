@@ -23,7 +23,7 @@ bot.on('message' , async message => {
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.send(embed);
+         message.channel.send.once(embed);
        
     } else {
     if(message.content == pref + 'hello')
@@ -69,7 +69,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == pref +  + 'info')
+    if(message.content.toLowerCase() == pref + 'info')
     {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
