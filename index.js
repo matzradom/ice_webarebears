@@ -15,7 +15,7 @@ let cooldown = new Set();
 let cdseconds = 1000;
 
 bot.on('message' , function(message){
-if(!message.content.toLowerCase()(pref + "hello")) return;
+if(!message.content.toLowerCase() == pref + "hello") return;
     if(cooldown.has(message.author.id)){
         message.delete();
       const embed = new RichEmbed()
