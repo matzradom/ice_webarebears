@@ -103,14 +103,10 @@ bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
         var response = bears[Math.floor(Math.random() * bears.length)]
-         const embed = new RichEmbed()
-       
-        .setTitle('Rawwwrrr')
-        .setColor(0xFF0000)
-        .setImage(bears)
-         message.channel.sendMessage(embed).then().catch(console.error);
+        message.channel.send("Raaaawr"+bears).then().catch(console.error);
     }
 });
+
 
 
 //-------------------------HELP COMMANDS---------------------------//
