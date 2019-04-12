@@ -107,9 +107,8 @@ bot.on('message' , function(message){
        
         .setTitle('Rawwwrrr')
         .setColor(0xFF0000)
-         
-        .setImage("bears")
-         message.channel.send(embed).then().catch(console.error);
+        .setImage(bears)
+         message.channel.sendMessage(embed).then().catch(console.error);
     }
 });
 
