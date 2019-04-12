@@ -15,7 +15,14 @@ let cooldown = new Set();
 let cdseconds = 1000;
 
 bot.on('message' , function(message){
-if(!message.content.toLowerCase() == pref + "hello") return;
+if(message.content.toLowerCase() == pref + "hello") 
+   { 
+    cooldown.add(message.author.id);
+   }
+});
+    
+bot.on('message' , function(message){
+if(message.content.toLowerCase() == pref + "hello") {
     if(cooldown.has(message.author.id)){
         
       const embed = new RichEmbed()
@@ -23,14 +30,11 @@ if(!message.content.toLowerCase() == pref + "hello") return;
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-        message.channel.send(embed);
+        return message.channel.send(embed);
     }
-
-    cooldown.add(message.author.id);
-
 });
-
-bot.on('message' , function(message){
+    
+   bot.on('message' , function(message){
 setTimeout(() => {
     cooldown.delete(message.author.id)
 }, cdseconds * 5)
