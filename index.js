@@ -14,11 +14,17 @@ let pref = ["ice "];
 let cooldown = new Set();
 let cdseconds = 1000;
 
-bot.on('message' , function(message){
+bot.on('message' , async message => {
    
     if (cooldown.has(message.author.id)) {
          message.delete();
-         message.channel.send("triall");
+   
+         const embed = new RichEmbed()
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("You have 5 seconds till you can use this command. ")
+         message.channel.send(embed);
+       
     } else {
     if(message.content == pref + 'hello')
     {
