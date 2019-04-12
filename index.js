@@ -17,12 +17,12 @@ let cdseconds = 1000;
 bot.on('message' , function(message){
    
     if (cooldown.has(message.author.id)) {
-            const embed = new RichEmbed()
-       
+         message.delete();
+         const embed = new RichEmbed()
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-        return message.channel.send(embed);
+         message.channel.send(embed);
     } else {
     if(message.content == pref + 'hello')
     {
@@ -31,7 +31,7 @@ bot.on('message' , function(message){
        
         cooldown.add(message.author.id);
         setTimeout(() => {
-          // Removes the user from the set after a minute
+          
           cooldown.delete(message.author.id);
         }, 5000);
     }
