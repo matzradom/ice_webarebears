@@ -17,7 +17,7 @@ let cdseconds = 1000;
 bot.on('message' , function(message){
 if(!message.content.toLowerCase() == pref + "hello") return;
     if(cooldown.has(message.author.id)){
-        message.delete(1000);
+        
       const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
