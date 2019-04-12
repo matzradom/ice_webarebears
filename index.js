@@ -10,7 +10,8 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
-let pref = ["ice"];
+var ice = ["ice", "ice "]
+let pref = ice;
 
 bot.on('message' , function(message){
     if(message.content == pref + ' hello')
