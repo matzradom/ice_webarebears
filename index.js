@@ -15,15 +15,9 @@ let cooldown = new Set();
 let cdseconds = 1000;
 
 bot.on('message' , function(message){
-if(message.content.toLowerCase() == pref + "hello")
-{
-    cooldown.add(message.author.id);
-}
-
- if(cooldown.has(message.author.id))
-     
-{
-      message.delete();
+if(!message.content.toLowerCase()(pref + "hello")) return;
+    if(cooldown.has(message.author.id)){
+        message.delete();
       const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -34,7 +28,10 @@ if(message.content.toLowerCase() == pref + "hello")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
         return message.channel.send(embed);
-}
+    }
+
+    cooldown.add(message.author.id);
+
 });
 
 bot.on('message' , function(message){
