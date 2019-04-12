@@ -34,7 +34,7 @@ bot.on('message' , function(message){
         //.setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
-         message.channel.send(embed);
+        return message.channel.send(embed);
 }
 });
 
