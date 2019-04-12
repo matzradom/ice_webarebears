@@ -15,7 +15,7 @@ let cooldown = new Set();
 let cdseconds = 5;
 
 bot.on('message' , function(message){
-if(message.content.startsWith(pre + "hello"))
+if(message.content.startsWith(pref + "hello"))
 {
     cooldown.add(message.author.id);
 }
