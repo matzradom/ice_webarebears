@@ -17,33 +17,12 @@ let cdseconds = 1000;
 
 bot.on('message' , async message => {
    
-    if (cooldown.has(message.author.id)) {
-         message.delete();
-         const embed = new RichEmbed()
-        .setTitle('Not too fast hooman.')
-        .setColor(0xFF0000)
-        .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.sendMessage(embed);
-       
-    } else {
+   
     if(message.content == pref + 'hello')
     {
         message.channel.sendMessage("Hello Hooman, what's up?");
     }
-       
-        cooldown.add(message.author.id);
-        setTimeout(() => {
-          
-          cooldown.delete(message.author.id);
-        }, 5000);
-    }
-});
-
-bot.on('message' , function(message){
-    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' chill')
-    {
-        message.channel.sendMessage(message.mentions.users.first() + " chiiiiillllll.");
-    }
+      
 });
 
 
