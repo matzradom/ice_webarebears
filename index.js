@@ -106,7 +106,7 @@ bot.on('message' , function(message){
        
         .setTitle('Commands')
         .setColor(0xFF0000)
-        .setDescription("\n"+"hello,bully,chill,info,rules")
+        .setDescription("\n"+"hello,bully,chill,whisper,info,rules")
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
         .setFooter("ice 'cmd' info | use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
@@ -159,6 +159,22 @@ bot.on('message' , function(message){
         .setDescription("I will ask the mentioned person to chill.")
             .addField("Usage","@mentionperson chill")
          .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setTimestamp(new Date())
+         message.channel.send(embed);
+      }
+  });
+
+ bot.on('message', message => {
+     if(message.content.toLowerCase() == pref + 'whisper info'){
+      
+           const embed = new RichEmbed()
+       
+        .setTitle('whisper')
+        .setColor(0xFF0000)
+        .setDescription("Lazy? Let me dm someone for you.")
+            .addField("Usage","whisper @mention 'your message here'.")
+       .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -381,7 +397,7 @@ bot.on('message' , function(message){
             return;
         }
             
-        message.delete(10);
+        message.delete(100);
         message.mentions.users.first().sendMessage(message.content.slice (29));
 
     }
@@ -391,7 +407,7 @@ bot.on('message' , function(message){
     if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
     {
         message.delete();
-        message.channel.sendMessage("Kkay, " + message.author + " dmed a warning to " + message.mentions.users.first());
+        message.channel.sendMessage("Kkay " + message.author + ", dmed a warning to " + message.mentions.users.first());
         message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
     }
 });
@@ -402,7 +418,7 @@ bot.on('message' , function(message){
 
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
 bot.on('ready', () => {
-    bot.user.setGame('with twigs. | help cmds')
+    bot.user.setGame('with twigs. | ice help cmds')
   })
 
   bot.on('ready',function(){
