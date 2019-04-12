@@ -103,7 +103,7 @@ bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
         var response = bears[Math.floor(Math.random() * bears.length)]
-        message.channel.send(bears).then().catch(console.error);
+        message.channel.sendMessage(bears);
     }
 });
 
