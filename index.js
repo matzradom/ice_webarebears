@@ -103,12 +103,14 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
+        const embed = new RichEmbed()
         var sendbear = bears[Math.floor(Math.random()*bears.length)]
+        var sendbeartext = beartext[Math.floor(Math.random()*beartext.length)]
        
         
         //message.channel.sendMessage(bears).then().catch(console.error);
 
-        
+        .setTitle(sendbeartext).then().catch(console.error)
         .setColor(0xFF0000)
         .setImage(sendbear).then().catch(console.error)
 //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
