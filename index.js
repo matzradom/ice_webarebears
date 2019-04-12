@@ -17,17 +17,13 @@ let cdseconds = 1000;
 bot.on('message' , function(message){
 if(!message.content.toLowerCase() == pref + "hello") return;
     if(cooldown.has(message.author.id)){
-        message.delete();
+        message.delete(1000);
       const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-            //.addField("Usage","whisper @mention 'your message here'.")
-        //.setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        //.setTimestamp(new Date())
-        return message.channel.send(embed);
+        message.channel.send(embed);
     }
 
     cooldown.add(message.author.id);
