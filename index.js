@@ -25,19 +25,25 @@ bot.on('message' , function(message){
  if(cooldown.has(message.author.id))
      
 {
-   message.delete();
-    const embed = new RichEmbed()
+      const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
             //.addField("Usage","whisper @mention 'your message here'.")
-       //.setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        //.setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
 }
 });
+
+bot.on('message' , function(message){
+setTimeout(() => {
+    cooldown.delete(message.author.id)
+}, cdseconds * 1000)
+});
+          
 
 bot.on('message' , function(message){
     if(message.content == pref + 'hello')
