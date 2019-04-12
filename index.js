@@ -102,7 +102,16 @@ bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
         var response = bears[Math.floor(Math.random() * bears.length)]
-        message.channel.sendMessage(response).then().catch(console.error);
+         const embed = new RichEmbed()
+       
+        .setTitle('Rawwwrrr')
+        .setColor(0xFF0000)
+        //.setDescription("\n"+"hello,bully,chill,whisper,info,rules")
+                           .                          
+       
+        .setImage(bears)
+        //.setTimestamp(new Date())
+        message.channel.send(embed).then().catch(console.error);
     }
 });
 
