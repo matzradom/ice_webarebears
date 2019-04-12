@@ -12,19 +12,18 @@ var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that 
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
 let pref = ["ice "];
 const cooldown = new Set();
-   const embed = new RichEmbed()
+   
 let cdseconds = 1000;
 
 bot.on('message' , async message => {
    
     if (cooldown.has(message.author.id)) {
          message.delete();
-   
-      
+         const embed = new RichEmbed()
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.send(embed);
+         message.channel.sendMessage(embed);
        
     } else {
     if(message.content == pref + 'hello')
