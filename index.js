@@ -20,7 +20,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == prefix + message.mentions.users.first() + ' chill')
+    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' chill')
     {
         message.channel.sendMessage(message.mentions.users.first() + " chiiiiillllll.");
     }
