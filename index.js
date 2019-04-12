@@ -104,7 +104,7 @@ bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
         var sendbear = bears[Math.floor(Math.random()*bears.length)]
-        var sendbeartext = bears[Math.floor(Math.random()*bears.length)]
+        var sendbeartext = beartext[Math.floor(Math.random()*beartext.length)]
         
         //message.channel.sendMessage(bears).then().catch(console.error);
 
