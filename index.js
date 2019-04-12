@@ -22,7 +22,7 @@ bot.on('message' , function(message){
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.send(embed);
+        return message.channel.send(embed);
     } else {
     if(message.content == pref + 'hello')
     {
