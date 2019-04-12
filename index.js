@@ -108,7 +108,7 @@ bot.on('message' , function(message){
         
         //message.channel.sendMessage(bears).then().catch(console.error);
 
-        .setTitle("Raaawwrr")
+        
         .setColor(0xFF0000)
         .setImage(sendbear).then().catch(console.error)
 //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
