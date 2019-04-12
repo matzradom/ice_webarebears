@@ -18,11 +18,7 @@ bot.on('message' , function(message){
    
     if (cooldown.has(message.author.id)) {
          message.delete();
-         const embed = new RichEmbed()
-        .setTitle('Not too fast hooman.')
-        .setColor(0xFF0000)
-        .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.send(embed);
+         message.channel.send("triall");
     } else {
     if(message.content == pref + 'hello')
     {
