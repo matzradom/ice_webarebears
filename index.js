@@ -10,11 +10,10 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
-var ice = ["ice", "ice "]
-let pref = ice;
+let pref = ["ice "];
 
 bot.on('message' , function(message){
-    if(message.content == pref + ' hello')
+    if(message.content == pref + 'hello')
     {
         message.channel.sendMessage("Hello Hooman, what's up?");
     }
@@ -29,28 +28,28 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == message.mentions.users.first() + ' bully')
+    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
     {
         message.channel.sendMessage(message.mentions.users.first() + " stop bullying " + message.author + ".");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' matz')
+    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz')
     {
         message.channel.sendMessage(message.mentions.users.first() + " Matz? My mom, my creator.");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + ' matz')
+    if(message.content.toLowerCase() == pref + 'matz')
     {
         message.channel.sendMessage("Matz? My mom, my creator.");
     }
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + ' info')
+    if(message.content.toLowerCase() == pref +  + 'info')
     {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
@@ -58,7 +57,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + message.mentions.users.first() + ' info')
+    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' info')
     {
         message.channel.sendMessage("Hey " + message.mentions.users.first() + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
     }
@@ -66,7 +65,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + ' wake up matz')
+    if(message.content.toLowerCase() == pref + 'wake up matz')
     {
         message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
     }
@@ -76,7 +75,7 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == "pubg?")
+    if(message.content.toLowerCase() == pref + "pubg?")
     {
         var response = pubg[Math.floor(Math.random()*pubg.length)]
         message.channel.sendMessage(message.author + response).then().catch(console.error);
@@ -92,7 +91,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == bot.user + ' xenon')
+    if(message.content.toLowerCase() == pref + 'xenon')
     {
         var response = xenon[Math.floor(Math.random()*xenon.length)]
         message.channel.sendMessage(response).then().catch(console.error);
@@ -101,16 +100,16 @@ bot.on('message' , function(message){
 
 //-------------------------HELP COMMANDS---------------------------//
   bot.on('message', message => {
-        if (message.content.toLowerCase() == "help cmds") {
+        if (message.content.toLowerCase() == pref + "help cmds") {
    
       const embed = new RichEmbed()
        
         .setTitle('Commands')
         .setColor(0xFF0000)
-        .setDescription("\n"+"hello,bully,chill,info,rules")
+        .setDescription("\n"+"hello,bully,chill,info,rules\nUse ice before each command.")
                            .addField("Misc Commands","matz,xenon,pubg?,wake up matz"+"\n")
                           
-        .setFooter("'cmd' + info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("ice 'cmd' info", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
@@ -118,7 +117,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-        if (message.content.toLowerCase() == "help cmds") {
+        if (message.content.toLowerCase() == pref + "help cmds") {
    
       const embed = new RichEmbed()
         .setTitle("Moderation Commands")
@@ -131,13 +130,14 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'hello info'){
+     if(message.content.toLowerCase() == pref + 'hello info'){
       
            const embed = new RichEmbed()
        
         .setTitle('hello')
         .setColor(0xFF0000)
         .setDescription("Receive a greeting back from me.")
+             .addField("Usage","ice hello")
          .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -146,14 +146,14 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'bully info'){
+     if(message.content.toLowerCase() == pref + 'bully info'){
       
            const embed = new RichEmbed()
        
         .setTitle('bully')
         .setColor(0xFF0000)
         .setDescription("I will ask the person bullying you to stop.")
-            .addField("Usage","@mentionbully bully")
+            .addField("Usage","ice @mentionbully bully")
         .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -162,14 +162,14 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'chill info'){
+     if(message.content.toLowerCase() == pref + 'chill info'){
       
            const embed = new RichEmbed()
        
         .setTitle('chill')
         .setColor(0xFF0000)
         .setDescription("I will ask the mentioned person to chill.")
-            .addField("Usage","@mentionperson chill")
+            .addField("Usage","ice @mentionperson chill")
          .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -178,14 +178,14 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'info info'){
+     if(message.content.toLowerCase() == pref + 'info info'){
       
            const embed = new RichEmbed()
        
         .setTitle('info')
         .setColor(0xFF0000)
         .setDescription("Learn more about me with this command")
-            .addField("Usage","@tagme info")
+            .addField("Usage","ice info")
         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -194,14 +194,14 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'matz info'){
+     if(message.content.toLowerCase() == pref + 'matz info'){
       
            const embed = new RichEmbed()
        
         .setTitle('matz')
         .setColor(0xFF0000)
         .setDescription("Who is Matz?")
-            .addField("Usage","@tagme matz")
+            .addField("Usage","ice matz")
          .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -209,14 +209,14 @@ bot.on('message' , function(message){
       }
   });
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'xenon info'){
+     if(message.content.toLowerCase() == pref + 'xenon info'){
       
            const embed = new RichEmbed()
        
         .setTitle('xenon')
         .setColor(0xFF0000)
         .setDescription("Who is Xenon?")
-            .addField("Usage","@tagme xenon")
+            .addField("Usage","ice xenon")
          .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
@@ -225,7 +225,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'pubg? info'){
+     if(message.content.toLowerCase() == pref + 'pubg? info'){
       
            const embed = new RichEmbed()
        
