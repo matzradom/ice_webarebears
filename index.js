@@ -116,18 +116,6 @@ bot.on('message' , function(message){
       }
   });
 
-  bot.on('message', message => {
-        if (message.content.toLowerCase() == pref + "help cmds") {
-   
-      const embed = new RichEmbed()
-        .setTitle("Moderation Commands")
-        .setColor(0xB6B6B6)
-        .setDescription("Here are commands for mods blahhhhh")
-                           .addField("Add rules","trial text blaaahh")
-                          
-        message.channel.send(embed);
-      }
-  });
 
   bot.on('message', message => {
      if(message.content.toLowerCase() == pref + 'hello info'){
@@ -138,7 +126,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Receive a greeting back from me.")
              .addField("Usage","hello")
-        .setFooter("ice 'cmd' info | use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -153,8 +141,8 @@ bot.on('message' , function(message){
         .setTitle('bully')
         .setColor(0xFF0000)
         .setDescription("I will ask the person bullying you to stop.")
-            .addField("Usage","ice @mentionbully bully")
-        .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","@mentionbully bully")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -169,8 +157,8 @@ bot.on('message' , function(message){
         .setTitle('chill')
         .setColor(0xFF0000)
         .setDescription("I will ask the mentioned person to chill.")
-            .addField("Usage","ice @mentionperson chill")
-         .setFooter("Commands are case insensitive","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","@mentionperson chill")
+         .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -185,8 +173,8 @@ bot.on('message' , function(message){
         .setTitle('info')
         .setColor(0xFF0000)
         .setDescription("Learn more about me with this command")
-            .addField("Usage","ice info")
-        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","info")
+       .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -201,8 +189,8 @@ bot.on('message' , function(message){
         .setTitle('matz')
         .setColor(0xFF0000)
         .setDescription("Who is Matz?")
-            .addField("Usage","ice matz")
-         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","matz")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -216,8 +204,8 @@ bot.on('message' , function(message){
         .setTitle('xenon')
         .setColor(0xFF0000)
         .setDescription("Who is Xenon?")
-            .addField("Usage","ice xenon")
-         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+            .addField("Usage","xenon")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -233,7 +221,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Maybe I wanna play pubg?")
             .addField("Usage","pubg?")
-         .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -249,7 +237,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Let's try to wake up Matz, shall we?")
             .addField("Usage","wake up matz")
-        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
@@ -265,7 +253,7 @@ bot.on('message' , function(message){
         .setColor(0xFF0000)
         .setDescription("Check out the rules fam! Don't get baned now.")
             .addField("Usage","rules,@mention rules,dm @mention rules")
-        .setFooter("Commands are case insensitive.","https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         //.setTimestamp(new Date())
          message.channel.send(embed);
