@@ -12,19 +12,18 @@ var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that 
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
 let pref = ["ice "];
 let cooldown = new Set();
-let cdseconds = 5;
+let cdseconds = 1000;
 
 bot.on('message' , function(message){
 if(message.content.startsWith(pref + "hello"))
 {
     cooldown.add(message.author.id);
 }
-});
 
-bot.on('message' , function(message){
  if(cooldown.has(message.author.id))
      
 {
+      message.delete();
       const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -41,7 +40,7 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
 setTimeout(() => {
     cooldown.delete(message.author.id)
-}, cdseconds * 1000)
+}, cdseconds * 5)
 });
           
 
