@@ -23,7 +23,7 @@ bot.on('message' , async message => {
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("You have 5 seconds till you can use this command. ")
-         message.channel.sendMessage(embed);
+         message.channel.reply(embed);
        
     } else {
     if(message.content == pref + 'hello')
