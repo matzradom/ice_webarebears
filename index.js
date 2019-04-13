@@ -103,19 +103,19 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
-          const embed = new RichEmbed()
+         
           var sendbear = bears[Math.floor(Math.random()*bears.length)]
-           .setTitle('rawwwrrrr')
-           .setImage(sendbear)
+          let imageEmbed = new Discord.RichEmbed() .setTitle('rawwwrrrr') .setImage(sendbear) 
+                  
           
-          
-          message.channel.send(embed).then().catch(console.error);
+          message.channel.send({embed: imageEmbed}); 
+         
     
       }
   });
 
 
-
+let imageEmbed = new Discord.RichEmbed() .setImage(folder + randomimage); message.channel.send({embed: imageEmbed}); } });
 //-------------------------HELP COMMANDS---------------------------//
   bot.on('message', message => {
         if (message.content.toLowerCase() == pref + "help cmds") {
