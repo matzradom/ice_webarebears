@@ -578,7 +578,7 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS END---------------------------//
 
-bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
+bot.login(process.env.token);
 bot.on('ready', () => {
 bot.user.setGame('with twigs. | ice help cmds')})
 bot.on('ready',function(){
