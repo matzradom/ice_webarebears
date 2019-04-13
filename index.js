@@ -47,7 +47,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(timeleft)
+        .setDescription(Timeout)
       
          message.channel.send(embed);
        } else {
@@ -55,7 +55,7 @@ bot.on('message' , async message => {
         message.channel.sendMessage("Hello Hooman, what's up?");
       
        cooldownhello.add(message.author.id);
-        const timeleft = setTimeout(() => {
+        setTimeout(() => {
         
           cooldownhello.delete(message.author.id);
         }, 60000).then().catch(console.error);
