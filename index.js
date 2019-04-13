@@ -371,7 +371,7 @@ bot.on('message' , function(message){
 //-------------------------RULES---------------------------//
 
 bot.on('message', message => {
-        if (message.content.toLowerCase() == "rules") {
+        if (message.content.toLowerCase() == pref + "rules") {
    
       const embed = new RichEmbed()
        
@@ -399,7 +399,7 @@ bot.on('message', message => {
 
 
 bot.on('message', message => {
-        if (message.content.toLowerCase() == message.mentions.users.first() + " rules") {
+        if (message.content.toLowerCase() == pref + message.mentions.users.first() + " rules") {
    
       const embed = new RichEmbed()
        
@@ -426,7 +426,7 @@ bot.on('message', message => {
   });
 
 bot.on('message', message => {
-        if (message.content.toLowerCase() == "dm " + message.mentions.users.first() + " rules") {
+        if (message.content.toLowerCase() == pref + "dm " + message.mentions.users.first() + " rules") {
       
       message.delete(1000);
       const embed = new RichEmbed()
@@ -479,7 +479,7 @@ bot.on('message', message => {
 //-------------------------DM COMMANDS---------------------------//
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase().startsWith ("whisper"))
+    if(message.content.toLowerCase().startsWith (pref + "whisper"))
     {
         if (message.mentions.users.first() == null)
         {
@@ -493,7 +493,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
-    if(message.content.toLowerCase() == message.mentions.users.first() + " quiet")
+    if(message.content.toLowerCase() == pref + message.mentions.users.first() + " quiet")
     {
         message.delete();
         message.channel.sendMessage("Kkay " + message.author + ", dmed a warning to " + message.mentions.users.first());
