@@ -40,7 +40,7 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-  let timeleft = setTimeout(() => {
+  const timeleft = setTimeout(() => {
         
           cooldownhello.delete(message.author.id);
         }, 60000)
