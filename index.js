@@ -103,8 +103,13 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
     {
+          const embed = new RichEmbed()
           var sendbear = bears[Math.floor(Math.random()*bears.length)]
-          message.channel.sendMessage(sendbear).then().catch(console.error);
+           .setTitle('rawwwrrrr')
+           .setImage(bear)
+          
+          
+          message.channel.send(embed).then().catch(console.error);
     
       }
   });
@@ -276,7 +281,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'wake up matz info'){
+     if(message.content.toLowerCase() == pref+'wake up matz info'){
       
            const embed = new RichEmbed()
        
@@ -292,11 +297,11 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == 'rules info'){
+     if(message.content.toLowerCase() == pref + 'rules info'){
       
            const embed = new RichEmbed()
        
-        .setTitle('xenon')
+        .setTitle('rules')
         .setColor(0xFF0000)
         .setDescription("Check out the rules fam! Don't get baned now.")
             .addField("Usage","rules,@mention rules,dm @mention rules")
