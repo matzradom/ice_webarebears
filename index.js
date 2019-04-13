@@ -2,7 +2,7 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-const cooldownhello = new Set();
+
 
 
 
