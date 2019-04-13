@@ -108,14 +108,13 @@ bot.on('message' , function(message){
           let imageEmbed = new Discord.RichEmbed() .setTitle('rawwwrrrr') .setImage(sendbear) 
                   
           
-          message.channel.send({embed: imageEmbed}); 
-         
-    
+          message.channel.send(imageEmbed); 
+           
       
-  });
+    }
+});
 
 
-let imageEmbed = new Discord.RichEmbed() .setImage(folder + randomimage); message.channel.send({embed: imageEmbed}); } });
 //-------------------------HELP COMMANDS---------------------------//
   bot.on('message', message => {
         if (message.content.toLowerCase() == pref + "help cmds") {
