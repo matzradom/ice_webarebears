@@ -39,6 +39,7 @@ var beartext =  ["Raaaaawwrrrrr",
                 "I know, I'm cute."]
 let pref = ["ice "];
 
+
 //-------------------------TEXT COMMANDS--------------------------//
 
 bot.on('message' , async message => {
@@ -267,6 +268,7 @@ bot.on('message' , function(message){
         }     
 }});
 
+
 //-------------------------TEXT COMMANDS END---------------------------//
 
 
@@ -368,7 +370,6 @@ bot.on('message', message => {
 });
 
 
-
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'matz info'){
@@ -383,6 +384,7 @@ bot.on('message', message => {
         message.channel.send(embed);
         }
 });
+
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
@@ -399,6 +401,7 @@ bot.on('message', message => {
         }
 });
 
+
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'pubg? info'){
@@ -413,6 +416,7 @@ bot.on('message', message => {
         message.channel.send(embed);
         }
 });
+
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
@@ -429,6 +433,7 @@ bot.on('message', message => {
         }
 });
 
+
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'wake up matz info'){
@@ -442,6 +447,7 @@ bot.on('message', message => {
         message.channel.send(embed);
       }
 });
+
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
@@ -462,7 +468,6 @@ bot.on('message', message => {
 //-------------------------HELP COMMANDS END---------------------------//
 
 //-------------------------RULES---------------------------//
-
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
@@ -488,7 +493,7 @@ bot.on('message', message => {
         .setTimestamp(new Date())
          message.channel.send(embed);
         }
-  });
+});
 
 
 bot.on('message', message => {
@@ -546,8 +551,8 @@ bot.on('message', message => {
         }
 });
 
-//-------------------------RULES END---------------------------//
 
+//-------------------------RULES END---------------------------//
 
 
 //-------------------------DM COMMANDS---------------------------//
@@ -560,7 +565,7 @@ bot.on('message' , function(message){
         return;
         }
         message.delete(100);
-        message.mentions.users.first().sendMessage(message.content.slice (29));
+        message.mentions.users.first().sendMessage(message.content.slice (33));
         }
 });
 
