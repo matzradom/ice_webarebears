@@ -2,7 +2,7 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-const talkedRecently = new Set();
+const cooldown = new Set();
 
 
 //-------------------------TEXT COMMANDS--------------------------//
@@ -44,7 +44,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("You have 5 seconds 'till you can use this comamnd again.")
+        .setDescription("You have " cooldown.delete(message.author.id)()/1000 "seconds "till you can use this comamnd again.")
       
          message.channel.send(embed);
        } else {
