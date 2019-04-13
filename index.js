@@ -237,7 +237,6 @@ bot.on('message' , function(message){
      cooldownbully.delete(message.author.id);
           }, 3000);
     }
-    }
 });
 
 //-------------------------HELP COMMANDS---------------------------//
