@@ -593,7 +593,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
-        if (message.content.toLowerCase() == pref + message.mentions.users.first() + " rules") {
+        if (message.content.toLowerCase() == pref + message.mentions.users.first() + " rule1") {
         const embed = new RichEmbed()
        
         .setTitle('Rules')
@@ -611,7 +611,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
-        if (message.content.toLowerCase() == pref + "dm " + message.mentions.users.first() + " rules") {
+        if (message.content.toLowerCase() == pref + "dm " + message.mentions.users.first() + " rule1") {
         message.delete(1000);
         const embed = new RichEmbed()
         
