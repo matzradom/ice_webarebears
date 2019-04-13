@@ -36,13 +36,10 @@ var beartext = ["Raaaaawwrrrrr",
                 "I know, I'm cute."]
 
 let pref = ["ice "];
-const cooldown = new Set();
-   
-let cdseconds = 1000;
 
 bot.on('message' , async message => {
     if(message.content == pref + 'hello'){
-    if (talkedRecently.has(message.author.id)) {
+    if (cooldown.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -54,11 +51,11 @@ bot.on('message' , async message => {
   
         message.channel.sendMessage("Hello Hooman, what's up?");
       
-       talkedRecently.add(message.author.id);
+       cooldown.add(message.author.id);
         setTimeout(() => {
         
-          talkedRecently.delete(message.author.id);
-        }, 5000).then().catch(console.error);
+          cooldown.delete(message.author.id);
+        }, 60000).then().catch(console.error);
     }
     }
       
@@ -67,9 +64,25 @@ bot.on('message' , async message => {
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
-    {
+    {    if (cooldown.has(message.author.id)) {
+            const embed = new RichEmbed()
+       
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("You have 5 seconds 'till you can use this comamnd again.")
+      
+         message.channel.send(embed);
+       } else {
+         
         message.channel.sendMessage(message.mentions.users.first() + " stop bullying " + message.author + ".");
+       cooldown.add(message.author.id);
+        setTimeout(() => {
+        
+          cooldown.delete(message.author.id);
+        }, 60000).then().catch(console.error);
     }
+    }
+      
 });
 
 bot.on('message' , function(message){
