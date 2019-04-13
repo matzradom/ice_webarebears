@@ -44,7 +44,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("You have " + cooldown.delete(message.author.id)()/1000 + "seconds 'till you can use this comamnd again.")
+        .setDescription("Cooldown for this command is set to 1 minute.")
       
          message.channel.send(embed);
        } else {
@@ -69,7 +69,7 @@ bot.on('message' , function(message){
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("You have 5 seconds 'till you can use this comamnd again.")
+        .setDescription("Cooldown for this command is set to 1 minute.")
       
          message.channel.send(embed);
        } else {
