@@ -44,14 +44,14 @@ bot.on('message' , async message => {
         
           cooldownhello.delete(message.author.id);
         }, 60000)
-  const timeleftnow
+  
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(${timeleftnow.toFixed(1)})
+        .setDescription(${timeleft.toFixed(1)})
       
          message.channel.send(embed);
        } else {
