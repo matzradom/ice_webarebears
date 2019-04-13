@@ -51,7 +51,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("Cooldown for this command is set to 1 minute.")
+        .setDescription((new Date()).getTime() - timeout)
       
          message.channel.send(embed);
        } else {
