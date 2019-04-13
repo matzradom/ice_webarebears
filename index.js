@@ -27,7 +27,8 @@ var bears = ["https://i.pinimg.com/564x/6c/66/01/6c6601ee0816cf07271d29c5b5d88b2
              "https://i.pinimg.com/564x/75/db/ac/75dbac0869b8d71a8d0285478ee422ac.jpg",
              "https://i.pinimg.com/564x/8c/8c/4b/8c8c4b85c9b48f88c8297fdf2b944534.jpg",
              "https://i.pinimg.com/564x/71/a0/4b/71a04bdf5f8229f5b363b2634fae6b28.jpg",]
-var beartext = ["Raaaaawwrrrrr",
+
+var beartext =  ["Raaaaawwrrrrr",
                 "I'm more adorable than you." ,
                 "Beaaaaaaaaaaaaaaar" ,
                 "B- b- buh beaar",
@@ -90,9 +91,21 @@ bot.on('message' , async message => {
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz')
-    {
+          {    if (cooldownbully.has(message.author.id)) {
+            const embed = new RichEmbed()
+       
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+      
+         message.channel.send(embed);
+       } else {
+    
         message.channel.sendMessage(message.mentions.users.first() + " Matz? My mom, my creator.");
+         cooldownbully.delete(message.author.id);
+        }, 60000);
     }
+          }
 });
 
 bot.on('message' , function(message){
