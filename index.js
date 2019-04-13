@@ -105,7 +105,8 @@ bot.on('message' , function(message){
     {
          
           var sendbear = bears[Math.floor(Math.random()*bears.length)]
-          let imageEmbed = new RichEmbed() .setTitle('rawwwrrrr') .setImage(sendbear) 
+          var sendbeartext = beartext[Math.floor(Math.random()*beartext.length)]
+          let imageEmbed = new RichEmbed() .setTitle(sendbeartext) .setImage(sendbear) 
                   
           
           message.channel.send(imageEmbed); 
