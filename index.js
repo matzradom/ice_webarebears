@@ -102,19 +102,36 @@ bot.on('message' , function(message){
        } else {
     
         message.channel.sendMessage(message.mentions.users.first() + " Matz? My mom, my creator.");
-         cooldownbully.delete(message.author.id);
+           cooldownbully.add(message.author.id);
+        setTimeout(() => {
+        
+          cooldownbully.delete(message.author.id);
         }, 60000);
     }
-          }
+    }
+      
 });
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'matz')
-    {
+    {    if (cooldownbully.has(message.author.id)) {
+            const embed = new RichEmbed()
+       
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+      
+         message.channel.send(embed);
+       } else {
         message.channel.sendMessage("Matz? My mom, my creator.");
+           cooldownbully.add(message.author.id);
+        setTimeout(() => {
+        
+          cooldownbully.delete(message.author.id);
+        }, 60000);
     }
-});
-
+    }
+      
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'info')
     {
