@@ -40,11 +40,6 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-  var timeout = setTimeout(() => {
-        
-          cooldownhello.delete(message.author.id);
-        }, 60000)
-  
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
       va
@@ -52,7 +47,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(60000 - ("hello command is set to 1 minute cooldown. Please wait 1 minute after your last hello command was sent.")
+        .setDescription("hello command is set to 1 minute cooldown. Please wait 1 minute after your last hello command was sent.")
       
          message.channel.send(embed);
        } else {
@@ -60,7 +55,10 @@ bot.on('message' , async message => {
         message.channel.sendMessage("Hello Hooman, what's up?");
       
        cooldownhello.add(message.author.id);
-        timeout;
+        setTimeout(() => {
+        
+          cooldownhello.delete(message.author.id);
+        }, 60000);
     }
     }
       
