@@ -47,6 +47,7 @@ var beartext =  ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
+        if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'hello'){
         if(cooldownhello.has(message.author.id)) {
         const embed = new RichEmbed()
@@ -67,6 +68,7 @@ bot.on('message' , async message => {
 
 
 bot.on('message' , async message => {
+    if(message.channel.type ==="dm") return;
  
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
     {    if (cooldownbully.has(message.author.id)) {
@@ -91,6 +93,7 @@ bot.on('message' , async message => {
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz')
           {    if (cooldownmatz.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -114,6 +117,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + 'matz')
     {    if (cooldownmatz.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -135,6 +139,7 @@ bot.on('message' , function(message){
  });
   
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + 'info')
    {    if (cooldowninfo.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -156,6 +161,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' info')
    {    if (cooldowninfo.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -177,6 +183,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + 'wake up matz')
     {
         message.channel.sendMessage('Mom, ' + message.author + ' wants you to wake up. I know, ' + message.author + ' sucks.');
@@ -187,6 +194,7 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + "pubg?")
      {    if (cooldownpubg.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -209,6 +217,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == bot.user)
     {
         var response = icetag[Math.floor(Math.random()*icetag.length)]
@@ -217,6 +226,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + 'xenon')
     {
         var response = xenon[Math.floor(Math.random()*xenon.length)]
@@ -225,6 +235,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + 'send bear')
      {    if (cooldownbears.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -253,6 +264,7 @@ bot.on('message' , function(message){
 
 //-------------------------HELP COMMANDS---------------------------//
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
         if (message.content.toLowerCase() == pref + "help cmds") {
    
       const embed = new RichEmbed()
@@ -271,6 +283,7 @@ bot.on('message' , function(message){
 
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'hello info'){
       
            const embed = new RichEmbed()
@@ -287,6 +300,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+    if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'bully info'){
       
            const embed = new RichEmbed()
@@ -303,6 +317,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'chill info'){
       
            const embed = new RichEmbed()
@@ -319,6 +334,7 @@ bot.on('message' , function(message){
   });
 
  bot.on('message', message => {
+     if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'whisper info'){
       
            const embed = new RichEmbed()
@@ -335,7 +351,8 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
-     if(message.content.toLowerCase() == pref + 'info'){
+      if(message.channel.type ==="dm") return;
+     if(message.content.toLowerCase() == pref + 'info info'){
       
            const embed = new RichEmbed()
        
@@ -353,6 +370,7 @@ bot.on('message' , function(message){
 
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'matz info'){
       
            const embed = new RichEmbed()
@@ -368,6 +386,7 @@ bot.on('message' , function(message){
       }
   });
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'xenon info'){
       
            const embed = new RichEmbed()
@@ -384,6 +403,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'pubg? info'){
       
            const embed = new RichEmbed()
@@ -400,6 +420,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'send bear info'){
       
            const embed = new RichEmbed()
@@ -416,6 +437,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref+'wake up matz info'){
       
            const embed = new RichEmbed()
@@ -432,6 +454,7 @@ bot.on('message' , function(message){
   });
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
      if(message.content.toLowerCase() == pref + 'rules info'){
       
            const embed = new RichEmbed()
@@ -453,6 +476,7 @@ bot.on('message' , function(message){
 //-------------------------RULES---------------------------//
 
 bot.on('message', message => {
+    if(message.channel.type ==="dm") return;
         if (message.content.toLowerCase() == pref + "rules") {
    
       const embed = new RichEmbed()
@@ -481,6 +505,7 @@ bot.on('message', message => {
 
 
 bot.on('message', message => {
+    if(message.channel.type ==="dm") return;
         if (message.content.toLowerCase() == pref + message.mentions.users.first() + " rules") {
    
       const embed = new RichEmbed()
@@ -508,6 +533,7 @@ bot.on('message', message => {
   });
 
 bot.on('message', message => {
+    if(message.channel.type ==="dm") return;
         if (message.content.toLowerCase() == pref + "dm " + message.mentions.users.first() + " rules") {
       
       message.delete(1000);
@@ -540,6 +566,7 @@ bot.on('message', message => {
 
 
   bot.on('message', message => {
+      if(message.channel.type ==="dm") return;
     // If the message is "how to embed"
     if (message.content.toLowerCase() == bot.user + ' sotd info') {
       // We can create embeds using the MessageEmbed constructor
@@ -561,6 +588,7 @@ bot.on('message', message => {
 //-------------------------DM COMMANDS---------------------------//
 
 bot.on('message' , function(message){
+  if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase().startsWith (pref + "whisper"))
     {
         if (message.mentions.users.first() == null)
@@ -575,6 +603,7 @@ bot.on('message' , function(message){
 });
 
 bot.on('message' , function(message){
+    if(message.channel.type ==="dm") return;
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + " quiet")
     {
         message.delete();
