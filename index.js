@@ -2,8 +2,8 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-const cooldownhello = new Set();
-const cooldownbully = new Set();
+const cooldown = new Set();
+
 
 
 //-------------------------TEXT COMMANDS--------------------------//
@@ -40,7 +40,7 @@ let pref = ["ice "];
 
 bot.on('message' , async message => {
     if(message.content.toLowerCase() == pref + 'hello'){
-    if (cooldownhello.has(message.author.id)) {
+    if (cooldown.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -52,10 +52,10 @@ bot.on('message' , async message => {
   
         message.channel.sendMessage("Hello Hooman, what's up?");
       
-       cooldownhello.add(message.author.id);
+       cooldown.add(message.author.id);
         setTimeout(() => {
         
-          cooldownhello.delete(message.author.id);
+          cooldown.delete(message.author.id);
         }, 60000).then().catch(console.error);
     }
     }
@@ -63,9 +63,9 @@ bot.on('message' , async message => {
 });
 
 
-bot.on('message' , function(message){
+bot.on('message' , async message => {
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
-    {    if (cooldownbully.has(message.author.id)) {
+    {    if (cooldown.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -76,10 +76,10 @@ bot.on('message' , function(message){
        } else {
          
         message.channel.sendMessage(message.mentions.users.first() + " stop bullying " + message.author + ".");
-       cooldownbully.add(message.author.id);
+       cooldown.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
+          cooldown.delete(message.author.id);
         }, 60000).then().catch(console.error);
     }
     }
