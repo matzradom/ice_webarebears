@@ -47,11 +47,12 @@ bot.on('message' , async message => {
   
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
+      va
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("Cooldown for this command is set to 1 minute.")
+        .setDescription(60000 - ("hello command is set to 1 minute cooldown. Please wait 1 minute after your last hello command was sent.")
       
          message.channel.send(embed);
        } else {
@@ -59,7 +60,7 @@ bot.on('message' , async message => {
         message.channel.sendMessage("Hello Hooman, what's up?");
       
        cooldownhello.add(message.author.id);
-        timeleft;
+        timeout;
     }
     }
       
@@ -74,7 +75,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("Cooldown for this command is set to 1 minute.")
+        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
