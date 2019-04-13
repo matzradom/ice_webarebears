@@ -91,10 +91,10 @@ bot.on('message' , async message => {
 
 
 bot.on('message' , function(message){
-    if(message.channel.type ==="dm") return;
-    if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz')
-          {    if (cooldownmatz.has(message.author.id)) {
-            const embed = new RichEmbed()
+        if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz'){
+        if (cooldownmatz.has(message.author.id)) {
+        const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
@@ -272,6 +272,37 @@ bot.on('message' , function(message){
 //-------------------------TEXT COMMANDS END---------------------------//
 
 
+//-------------------------DM COMMANDS---------------------------//
+
+bot.on('message' , function(message){
+        if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase().startsWith (pref + "whisper")){
+          
+        message.delete(0);
+          
+        if (message.mentions.users.first() == null)
+        {
+        return;
+        }
+        message.mentions.users.first().sendMessage(message.content.slice (33));
+        }
+});
+
+
+bot.on('message' , function(message){
+        if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + message.mentions.users.first() + " quiet")
+        {
+        message.delete();
+        message.channel.sendMessage("Kkay " + message.author + ", dmed a warning to " + message.mentions.users.first());
+        message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
+        }
+});
+
+
+//-------------------------DM COMMANDS END---------------------------//
+
+
 //-------------------------HELP COMMANDS---------------------------//
 
 bot.on('message', message => {
@@ -293,7 +324,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'hello info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('hello')
@@ -309,7 +339,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'bully info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('bully')
@@ -325,7 +354,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'chill info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('chill')
@@ -341,7 +369,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'whisper info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('whisper')
@@ -357,7 +384,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'info info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('info')
@@ -373,7 +399,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'matz info'){
-        
         const embed = new RichEmbed()
        
         .setTitle('matz')
@@ -389,7 +414,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'xenon info'){
-        
         const embed = new RichEmbed()
        
         .setTitle('xenon')
@@ -405,7 +429,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'pubg? info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('xenon')
@@ -421,7 +444,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'send bear info'){
-          
         const embed = new RichEmbed()
        
         .setTitle('send bear')
@@ -437,7 +459,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'wake up matz info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('xenon')
@@ -452,7 +473,6 @@ bot.on('message', message => {
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'rules info'){
-      
         const embed = new RichEmbed()
        
         .setTitle('rules')
@@ -552,36 +572,67 @@ bot.on('message', message => {
 });
 
 
+//////
+
+
+bot.on('message', message => {
+        if(message.channel.type ==="dm") return;
+        if (message.content.toLowerCase() == pref + "rule1") {
+        const embed = new RichEmbed()
+       
+        .setTitle('Rules')
+        .setColor(0xFF0000)
+        //.setDescription("Hi " + message.mentions.users.first()+".")
+                                      .addField("Rule 1.","Will add rules soon.")
+                                            
+        .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setTimestamp(new Date())
+         message.channel.send(embed);
+        }
+});
+
+
+bot.on('message', message => {
+        if(message.channel.type ==="dm") return;
+        if (message.content.toLowerCase() == pref + message.mentions.users.first() + " rules") {
+        const embed = new RichEmbed()
+       
+        .setTitle('Rules')
+        .setColor(0xFF0000)
+        .setDescription("Hi " + message.mentions.users.first()+".")
+                                      .addField("Rule 1.","Will add rules soon.")
+                                      
+        .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setTimestamp(new Date())
+         message.channel.send(embed);
+        }
+});
+
+
+bot.on('message', message => {
+        if(message.channel.type ==="dm") return;
+        if (message.content.toLowerCase() == pref + "dm " + message.mentions.users.first() + " rules") {
+        message.delete(1000);
+        const embed = new RichEmbed()
+        
+        .setTitle('Rules')
+        .setColor(0xFF0000)
+        .setDescription("Hi " + message.mentions.users.first()+".")
+                                      .addField("Rule 1.","Will add rules soon.")
+                                      
+        .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setTimestamp(new Date())
+         message.mentions.users.first().sendMessage(embed);
+        }
+});
+
+
+
+
 //-------------------------RULES END---------------------------//
-
-
-//-------------------------DM COMMANDS---------------------------//
-
-bot.on('message' , function(message){
-        if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase().startsWith (pref + "whisper")){
-        if (message.mentions.users.first() == null)
-        {
-        return;
-        }
-        message.delete(100);
-        message.mentions.users.first().sendMessage(message.content.slice (33));
-        }
-});
-
-
-bot.on('message' , function(message){
-        if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase() == pref + message.mentions.users.first() + " quiet")
-        {
-        message.delete();
-        message.channel.sendMessage("Kkay " + message.author + ", dmed a warning to " + message.mentions.users.first());
-        message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
-        }
-});
-
-
-//-------------------------DM COMMANDS END---------------------------//
 
 bot.login(process.env.token);
 bot.on('ready', () => {
