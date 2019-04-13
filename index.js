@@ -3,7 +3,7 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const cooldownhello = new Set();
-const cooldownbully = new Set2();
+
 
 
 
@@ -40,6 +40,7 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
+  const cooldownhello = new Set();
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
             const embed = new RichEmbed()
@@ -65,6 +66,7 @@ bot.on('message' , async message => {
 
 
 bot.on('message' , async message => {
+  const cooldownbully = new Set();
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
     {    if (cooldownbully.has(message.author.id)) {
             const embed = new RichEmbed()
