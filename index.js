@@ -82,7 +82,7 @@ bot.on('message' , async message => {
        cooldownbully.add(message.author.id);
         setTimeout(() => {
         
-          cooldowbully.delete(message.author.id);
+          cooldownbully.delete(message.author.id);
         }, 60000).then().catch(console.error);
     }
     }
