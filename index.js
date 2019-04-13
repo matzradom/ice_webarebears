@@ -47,7 +47,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(Math.round(cooldownhello[message.author.id])
+        .setDescription(Math.round(cooldownhello[message.author.id]))
       
          message.channel.send(embed);
        } else {
