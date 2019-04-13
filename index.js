@@ -10,8 +10,30 @@ const bot = new Commando.Client({unknownCommandResponse: false});
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
-var bears = ["https://i.pinimg.com/236x/cf/a2/78/cfa2780926f72cc26a83d17bd03a47b1.jpg", "https://i.pinimg.com/564x/d6/53/ce/d653ce37b5d00a5bb2ce6cf60da01799.jpg" , "https://i.pinimg.com/564x/a8/8b/29/a88b29a65568564eccbb70e943f82147.jpg", "https://i.pinimg.com/564x/0a/37/95/0a37956a47bc006459e343c4b8a7b87b.jpg", "https://i.pinimg.com/564x/d0/99/ff/d099ff7afa62ff9f0416d81ccebf5831.jpg", "https://i.pinimg.com/564x/72/cc/3d/72cc3d7f04e8357a8719d47828333fda.jpg", "https://i.pinimg.com/564x/f9/d1/9d/f9d19d58faa0cdaf63489219864f7e72.jpg"]
-var beartext = ["Raaaaawwrrrrr", "I'm more adorable than you." , "Beaaaaaaaaaaaaaaar" , "B- b- buh beaar"]
+var bears = ["https://i.pinimg.com/236x/cf/a2/78/cfa2780926f72cc26a83d17bd03a47b1.jpg",
+             "https://i.pinimg.com/564x/d6/53/ce/d653ce37b5d00a5bb2ce6cf60da01799.jpg" , 
+             "https://i.pinimg.com/564x/a8/8b/29/a88b29a65568564eccbb70e943f82147.jpg", 
+             "https://i.pinimg.com/564x/0a/37/95/0a37956a47bc006459e343c4b8a7b87b.jpg", 
+             "https://i.pinimg.com/564x/d0/99/ff/d099ff7afa62ff9f0416d81ccebf5831.jpg", 
+             "https://i.pinimg.com/564x/72/cc/3d/72cc3d7f04e8357a8719d47828333fda.jpg", 
+             "https://i.pinimg.com/564x/f9/d1/9d/f9d19d58faa0cdaf63489219864f7e72.jpg",
+             "https://i.pinimg.com/564x/c4/b7/9c/c4b79c65c6d9a4002104abedd783fd0f.jpg",
+             "https://i.pinimg.com/564x/05/78/88/05788879ea1457e7b4ab2370b33acc08.jpg",
+             "https://i.pinimg.com/564x/76/7e/25/767e25397f428d35233d3e3efe0b46aa.jpg",
+             "https://i.pinimg.com/564x/38/62/4f/38624ffdfdf65d20a3ad4a4dcff5dc32.jpg",
+             "https://i.pinimg.com/564x/ed/28/b1/ed28b19b2754695cc5275f544fdcaf6d.jpg",
+             "https://i.pinimg.com/564x/75/db/ac/75dbac0869b8d71a8d0285478ee422ac.jpg",
+             "https://i.pinimg.com/564x/8c/8c/4b/8c8c4b85c9b48f88c8297fdf2b944534.jpg",
+             "https://i.pinimg.com/564x/71/a0/4b/71a04bdf5f8229f5b363b2634fae6b28.jpg",]
+var beartext = ["Raaaaawwrrrrr",
+                "I'm more adorable than you." ,
+                "Beaaaaaaaaaaaaaaar" ,
+                "B- b- buh beaar",
+                "Cuteness = me",
+                "awwwwww",
+                "we bare bears",
+                "Hooman, I love you."
+                "I know, I'm cute."]
 
 let pref = ["ice "];
 const cooldown = new Set();
