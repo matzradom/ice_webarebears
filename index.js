@@ -47,24 +47,21 @@ var beartext =  ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-    if(message.content.toLowerCase() == pref + 'hello'){
-    if(cooldownhello.has(message.author.id)) {
-    const embed = new RichEmbed()
+        if(message.content.toLowerCase() == pref + 'hello'){
+        if(cooldownhello.has(message.author.id)) {
+        const embed = new RichEmbed()
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
         .setDescription("hello command is set to 1 minute cooldown. Please wait 1 minute after your last hello command was sent.")
-      
          message.channel.send(embed);
          } else {
-  
         message.channel.sendMessage("Hello Hooman, what's up?");
-      
-     cooldownhello.add(message.author.id);
-     setTimeout(() => {
-     cooldownhello.delete(message.author.id);
-         }, 60000);
-    }
-    }
+        cooldownhello.add(message.author.id);
+        setTimeout(() => {
+        cooldownhello.delete(message.author.id);
+        }, 60000);
+        }
+        }
       
 });
 
