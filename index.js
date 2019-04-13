@@ -576,7 +576,6 @@ bot.on('message' , function(message){
 });
 
 
-
 //-------------------------DM COMMANDS END---------------------------//
 
 bot.login('NTY1MTkwNzMyMjY5NDg2MTAw.XK3wNA.Xh3Fhz8tADPj0iEjXVaGwvkqW8k');
