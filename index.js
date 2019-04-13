@@ -42,8 +42,7 @@ let pref = ["ice "];
 bot.on('message' , async message => {
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
-      va
-            const embed = new RichEmbed()
+        const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
