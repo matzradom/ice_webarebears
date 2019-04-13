@@ -40,7 +40,7 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-  const timeleft = setTimeout(() => {
+  var timeout = setTimeout(() => {
         
           cooldownhello.delete(message.author.id);
         }, 60000)
@@ -51,7 +51,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(getTimeout())
+        .setDescription(getTimeLeft(timeout))
       
          message.channel.send(embed);
        } else {
