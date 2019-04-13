@@ -277,13 +277,11 @@ bot.on('message' , function(message){
 bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase().startsWith (pref + "whisper")){
-          
-        message.delete(0);
-          
         if (message.mentions.users.first() == null)
         {
         return;
         }
+        message.delete(0);
         message.mentions.users.first().sendMessage(message.content.slice (33));
         }
 });
@@ -307,7 +305,7 @@ bot.on('message' , function(message){
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
-        if (message.content.toLowerCase() == pref + "help cmds") {
+        if(message.content.toLowerCase() == pref + "help cmds") {
    
         const embed = new RichEmbed()
        
