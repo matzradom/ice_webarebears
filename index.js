@@ -2,7 +2,7 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-
+const talkedRecently = new Set();
 
 
 //-------------------------TEXT COMMANDS--------------------------//
@@ -48,7 +48,7 @@ bot.on('message' , async message => {
   
         message.channel.sendMessage("Hello Hooman, what's up?");
       
-       talkedRecently.add(msg.author.id);
+       talkedRecently.add(message.author.id);
         setTimeout(() => {
           // Removes the user from the set after a minute
           talkedRecently.delete(message.author.id);
