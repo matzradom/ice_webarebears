@@ -2,7 +2,8 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-const cooldown = new Set();
+const cooldownhello = new Set();
+const cooldownbully = new Set();
 
 
 //-------------------------TEXT COMMANDS--------------------------//
@@ -39,7 +40,7 @@ let pref = ["ice "];
 
 bot.on('message' , async message => {
     if(message.content.toLowerCase() == pref + 'hello'){
-    if (cooldown.has(message.author.id)) {
+    if (cooldownhello.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -51,10 +52,10 @@ bot.on('message' , async message => {
   
         message.channel.sendMessage("Hello Hooman, what's up?");
       
-       cooldown.add(message.author.id);
+       cooldownhello.add(message.author.id);
         setTimeout(() => {
         
-          cooldown.delete(message.author.id);
+          cooldownhello.delete(message.author.id);
         }, 60000).then().catch(console.error);
     }
     }
@@ -64,7 +65,7 @@ bot.on('message' , async message => {
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
-    {    if (cooldown.has(message.author.id)) {
+    {    if (cooldownbully.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -75,10 +76,10 @@ bot.on('message' , function(message){
        } else {
          
         message.channel.sendMessage(message.mentions.users.first() + " stop bullying " + message.author + ".");
-       cooldown.add(message.author.id);
+       cooldownbully.add(message.author.id);
         setTimeout(() => {
         
-          cooldown.delete(message.author.id);
+          cooldownbully.delete(message.author.id);
         }, 60000).then().catch(console.error);
     }
     }
