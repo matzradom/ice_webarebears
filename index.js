@@ -229,8 +229,7 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
-    if(message.content.toLowerCase() == pref + "pubg?")
-     {    if (cooldownpubg.has(message.author.id)) {
+     {    if (cooldownbears.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
@@ -247,9 +246,9 @@ bot.on('message' , function(message){
           
           message.channel.send(imageEmbed);
       
-     cooldownbully.add(message.author.id);
+     cooldownbears.add(message.author.id);
      setTimeout(() => {
-     cooldownbully.delete(message.author.id);
+     cooldownbears.delete(message.author.id);
           }, 3000);
     }
 });
