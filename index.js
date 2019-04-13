@@ -2,7 +2,7 @@ const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
-
+const cooldownhello = new Set();
 
 
 
@@ -40,14 +40,14 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-  const cooldownhello = new Set();
+  
     if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldownhello.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("Cooldown for this command is set to 1 minute.")
+        .setDescription(Math.round(cooldownhello[message.author.id])
       
          message.channel.send(embed);
        } else {
