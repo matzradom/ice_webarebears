@@ -41,11 +41,19 @@ const cooldown = new Set();
 let cdseconds = 1000;
 
 bot.on('message' , async message => {
-   
-   
-    if(message.content == pref + 'hello')
-    {
+    if(message.content == pref + 'hello'){
+    if (talkedRecently.has(message.author.id)) {
+            message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
+    } else {
+  
         message.channel.sendMessage("Hello Hooman, what's up?");
+      
+       talkedRecently.add(msg.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 5000).then().catch(console.error);
+    }
     }
       
 });
