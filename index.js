@@ -51,7 +51,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription((new Date()).getTime() - timeout)
+        .setDescription((new Date()).getTime() - timeout.getTime())
       
          message.channel.send(embed);
        } else {
