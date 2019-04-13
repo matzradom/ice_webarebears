@@ -58,7 +58,7 @@ bot.on('message' , async message => {
         setTimeout(() => {
         
           cooldownhello.delete(message.author.id);
-        }, 60000);
+        }, 5000);
     }
     }
       
