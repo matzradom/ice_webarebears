@@ -32,7 +32,7 @@ var beartext = ["Raaaaawwrrrrr",
                 "Cuteness = me",
                 "awwwwww",
                 "we bare bears",
-                "Hooman, I love you."
+                "Hooman, I love you.",
                 "I know, I'm cute."]
 
 let pref = ["ice "];
