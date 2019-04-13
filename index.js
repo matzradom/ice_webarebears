@@ -3,7 +3,7 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const cooldownhello = new Set();
-
+ const cooldownbully = new Set();
 
 
 
@@ -47,7 +47,7 @@ bot.on('message' , async message => {
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription(Timeout)
+        .setDescription("tiral againasdjfalsfa")
       
          message.channel.send(embed);
        } else {
@@ -66,7 +66,7 @@ bot.on('message' , async message => {
 
 
 bot.on('message' , async message => {
-  const cooldownbully = new Set();
+ 
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' bully')
     {    if (cooldownbully.has(message.author.id)) {
             const embed = new RichEmbed()
