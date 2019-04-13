@@ -38,7 +38,7 @@ var beartext = ["Raaaaawwrrrrr",
 let pref = ["ice "];
 
 bot.on('message' , async message => {
-    if(message.content == pref + 'hello'){
+    if(message.content.toLowerCase() == pref + 'hello'){
     if (cooldown.has(message.author.id)) {
             const embed = new RichEmbed()
        
