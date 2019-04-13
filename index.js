@@ -281,7 +281,7 @@ bot.on('message' , function(message){
         {
         return;
         }
-        message.content.delete(0);
+        message.delete(1000);
         message.mentions.users.first().sendMessage(message.content.slice (33));
         }
 });
@@ -317,7 +317,7 @@ bot.on('message', message => {
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         message.channel.send(embed);
         }
-  });
+});
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
