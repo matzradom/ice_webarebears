@@ -4,6 +4,12 @@ const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const cooldownhello = new Set();
 const cooldownbully = new Set();
+const cooldownchill = new Set();
+const cooldownmatz = new Set();
+const cooldowninfo = new Set();
+const cooldownwup = new Set();
+const cooldownbears = new Set();
+const cooldownpubg = new Set();
 
 
 
@@ -89,21 +95,21 @@ bot.on('message' , async message => {
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' matz')
-          {    if (cooldownbully.has(message.author.id)) {
+          {    if (cooldownmatz.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+        .setDescription("matz command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
     
         message.channel.sendMessage(message.mentions.users.first() + " Matz? My mom, my creator.");
-           cooldownbully.add(message.author.id);
+           cooldownmatz.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
+          cooldownmatz.delete(message.author.id);
         }, 60000);
     }
     }
@@ -112,20 +118,20 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'matz')
-    {    if (cooldownbully.has(message.author.id)) {
+    {    if (cooldownmatz.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+        .setDescription("matz command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
         message.channel.sendMessage("Matz? My mom, my creator.");
-           cooldownbully.add(message.author.id);
+           cooldownmatz.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
+          cooldownmatz.delete(message.author.id);
         }, 60000);
     }
     }
@@ -133,20 +139,20 @@ bot.on('message' , function(message){
   
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'info')
-   {    if (cooldownbully.has(message.author.id)) {
+   {    if (cooldowninfo.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+        .setDescription("info command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
-    cooldownbully.add(message.author.id);
+    cooldowninfo.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
+          cooldowninfo.delete(message.author.id);
         }, 60000);
     }
     }
@@ -154,20 +160,20 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + message.mentions.users.first() + ' info')
-   {    if (cooldownbully.has(message.author.id)) {
+   {    if (cooldowninfo.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+        .setDescription("info command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
         message.channel.sendMessage("Hey " + message.mentions.users.first() + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
-       cooldownbully.add(message.author.id);
+       cooldowninfo.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
+          cooldowninfo.delete(message.author.id);
         }, 60000);
     }
     }
@@ -185,22 +191,22 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + "pubg?")
-     {    if (cooldownbully.has(message.author.id)) {
+     {    if (cooldownpubg.has(message.author.id)) {
             const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
         .setColor(0xFF0000)
-        .setDescription("bully command is set to 1 minute cooldown. Please wait 1 minute after your last bully command was sent.")
+        .setDescription("pubg? command is set to 5 seconds cooldown. Please wait 5 seconds after your last bully command was sent.")
       
          message.channel.send(embed);
        } else {
         var response = pubg[Math.floor(Math.random()*pubg.length)]
         message.channel.sendMessage(message.author + response).then().catch(console.error);
-       cooldownbully.add(message.author.id);
+       cooldownpubg.add(message.author.id);
         setTimeout(() => {
         
-          cooldownbully.delete(message.author.id);
-        }, 60000);
+          cooldownpubg.delete(message.author.id);
+        }, 5000);
     }
     }
 });
@@ -223,7 +229,16 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
     if(message.content.toLowerCase() == pref + 'send bear')
-    {
+    if(message.content.toLowerCase() == pref + "pubg?")
+     {    if (cooldownpubg.has(message.author.id)) {
+            const embed = new RichEmbed()
+       
+        .setTitle('Not too fast hooman.')
+        .setColor(0xFF0000)
+        .setDescription("send bear command is set to 3 seconds cooldown. Please wait 3 seconds after your last bully command was sent.")
+      
+         message.channel.send(embed);
+       } else {
          
           var sendbear = bears[Math.floor(Math.random()*bears.length)]
           var sendbeartext = beartext[Math.floor(Math.random()*beartext.length)]
