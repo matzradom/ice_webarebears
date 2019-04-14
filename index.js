@@ -289,8 +289,6 @@ bot.on('message' , async message => {
         .addField("Other info:", "Up votes: " + allowed[randomnumber].data.ups + " / Comments: " + allowed[randomnumber].data.num_comments)
         .setFooter("Memes provided by r/dankmemes")
         message.channel.send(embed)
-    } catch (err) {
-        return console.log(err);
     }}
 }
 });
