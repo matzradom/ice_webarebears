@@ -270,7 +270,7 @@ bot.on('message' , function(message){
 }});
 
 
-bot.on('message' , function(message){
+bot.on('message' , async message => {
 
 	try {
 	if(message.channel.type ==="dm") return;
