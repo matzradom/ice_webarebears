@@ -270,7 +270,7 @@ bot.on('message' , function(message){
 }});
 
 
-exports.run = async (client, message, args) => {
+bot.on('message' , function(message){
 
 	try {
 	if(message.channel.type ==="dm") return;
@@ -293,7 +293,7 @@ exports.run = async (client, message, args) => {
         return console.log(err);
     }}
 }
-
+});
 //-------------------------TEXT COMMANDS END---------------------------//
 
 
