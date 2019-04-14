@@ -271,6 +271,8 @@ bot.on('message' , function(message){
 
 
 exports.run = async (client, message, args) => {
+	if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + 'send meme'){
 	try {
         const { body } = await snekfetch
             .get('https://www.reddit.com/r/dankmemes.json?sort=top&t=week')
@@ -288,7 +290,7 @@ exports.run = async (client, message, args) => {
         message.channel.send(embed)
     } catch (err) {
         return console.log(err);
-    }
+    }}
 }
 
 //-------------------------TEXT COMMANDS END---------------------------//
