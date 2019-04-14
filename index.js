@@ -28,7 +28,24 @@ var bears = ["https://i.pinimg.com/564x/6c/66/01/6c6601ee0816cf07271d29c5b5d88b2
              "https://i.pinimg.com/564x/ed/28/b1/ed28b19b2754695cc5275f544fdcaf6d.jpg",
              "https://i.pinimg.com/564x/75/db/ac/75dbac0869b8d71a8d0285478ee422ac.jpg",
              "https://i.pinimg.com/564x/8c/8c/4b/8c8c4b85c9b48f88c8297fdf2b944534.jpg",
-             "https://i.pinimg.com/564x/71/a0/4b/71a04bdf5f8229f5b363b2634fae6b28.jpg",]
+             "https://i.pinimg.com/564x/71/a0/4b/71a04bdf5f8229f5b363b2634fae6b28.jpg",
+             "https://i.pinimg.com/564x/8e/cf/82/8ecf82942c1ccb91b04b2fa3ad1180b1.jpg",
+             "https://i.pinimg.com/564x/b6/72/50/b6725086c1a70883ac792dcf4068e929.jpg",
+             "https://i.pinimg.com/564x/8f/63/f2/8f63f21d11f9f9555b1c59a28ce19785.jpg",
+             
+             "https://data.whicdn.com/images/326975279/large.jpg",
+             "https://data.whicdn.com/images/326902082/large.jpg",
+             "https://data.whicdn.com/images/326919699/large.jpg",
+             "https://data.whicdn.com/images/326069443/large.jpg",
+             "https://data.whicdn.com/images/326206691/large.jpg",
+             "https://data.whicdn.com/images/326057107/large.jpg",
+             "https://data.whicdn.com/images/326057076/large.jpg",
+             "https://data.whicdn.com/images/326057046/large.jpg",
+             "https://data.whicdn.com/images/326039322/large.jpg",
+             "https://data.whicdn.com/images/326039252/large.jpg",
+             "https://data.whicdn.com/images/326039076/large.jpg",
+             
+            ]
 var beartext =  ["Raaaaawwrrrrr",
                 "I'm more adorable than you." ,
                 "Beaaaaaaaaaaaaaaar" ,
