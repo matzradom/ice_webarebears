@@ -319,7 +319,7 @@ bot.on('message' , function(message){
         message.channel.sendMessage("Kkay " + message.author + ", dmed a warning to " + message.mentions.users.first());
         message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
         }
-});
+}});
 
 //-------------------------DM COMMANDS END---------------------------//
 
