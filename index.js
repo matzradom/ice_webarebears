@@ -290,7 +290,7 @@ exports.run = async (client, message, args) => {
         message.channel.send(embed)
     } catch (err) {
         return console.log(err);
-    }
+    }}}
 }});
 
 //-------------------------TEXT COMMANDS END---------------------------//
