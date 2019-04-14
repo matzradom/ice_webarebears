@@ -271,8 +271,6 @@ bot.on('message' , function(message){
 
 
 bot.on('message' , async message => {
-
-	try {
 	if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'send meme'){
         const { body } = await snekfetch
@@ -290,7 +288,6 @@ bot.on('message' , async message => {
         .setFooter("Memes provided by r/dankmemes")
         message.channel.send(embed)
     }}
-}
 });
 //-------------------------TEXT COMMANDS END---------------------------//
 
