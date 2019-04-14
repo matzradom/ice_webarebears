@@ -267,7 +267,7 @@ bot.on('message' , function(message){
         cooldownbears.delete(message.author.id);
         }, 3000);
         }     
-});
+}});
 
 
 
