@@ -295,7 +295,7 @@ exports.run = async (client, message, args) => {
         } catch (err) {
         return console.log(err);
         }
-}}};
+}};
 
 //-------------------------TEXT COMMANDS END---------------------------//
 
