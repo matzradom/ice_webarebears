@@ -10,6 +10,8 @@ const cooldowninfo = new Set();
 const cooldownwup = new Set();
 const cooldownbears = new Set();
 const cooldownpubg = new Set();
+const snekfetch = require('snekfetch');
+
 var xenon = [" Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
 var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
@@ -269,6 +271,29 @@ bot.on('message' , function(message){
 }});
 
 
+exports.run = async (client, message, args) => {
+	try {
+        const { body } = await snekfetch
+            .get('https://www.reddit.com/r/dankmemes.json?sort=top&t=week')
+            .query({ limit: 800 });
+        const allowed = message.channel.nsfw ? body.data.children : body.data.children.filter(post => !post.data.over_18);
+        if (!allowed.length) return message.channel.send('It seems we are out of fresh memes!, Try again later.');
+        const randomnumber = Math.floor(Math.random() * allowed.length)
+        const embed = new Discord.RichEmbed()
+        .setColor(0x00A2E8)
+        .setTitle(allowed[randomnumber].data.title)
+        .setDescription("Posted by: " + allowed[randomnumber].data.author)
+        .setImage(allowed[randomnumber].data.url)
+        .addField("Other info:", "Up votes: " + allowed[randomnumber].data.ups + " / Comments: " + allowed[randomnumber].data.num_comments)
+        .setFooter("Memes provided by r/dankmemes")
+        message.channel.send(embed)
+    } catch (err) {
+        return console.log(err);
+    }
+}
+
+
+
 //-------------------------TEXT COMMANDS END---------------------------//
 
 
@@ -296,7 +321,6 @@ bot.on('message' , function(message){
         message.mentions.users.first().sendMessage(message.author + " wants you to STFU.");
         }
 });
-
 
 //-------------------------DM COMMANDS END---------------------------//
 
