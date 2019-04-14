@@ -155,7 +155,7 @@ bot.on('message' , function(message){
           
         message.channel.sendMessage("Hey " + message.author + ", I see you're interested in me hooman. My name is Ice, created on April 9, 2019 by my mom, creator, and an overall amazing hooman Matz. She is the only hooman I will ever love.\n\nFun fact, I was named after Ice Bear of We Bare Bears.");
         
-        ooldowninfo.add(message.author.id);
+        cooldowninfo.add(message.author.id);
         setTimeout(() => {
         cooldowninfo.delete(message.author.id);
         }, 60000);
@@ -292,7 +292,7 @@ exports.run = async (client, message, args) => {
         .setFooter("Memes provided by r/dankmemes")
         message.channel.send(embed)
           
-        }
+        }catch(console.error);
 }};
 
 //-------------------------TEXT COMMANDS END---------------------------//
