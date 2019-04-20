@@ -4,6 +4,7 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const snekfetch = require('snekfetch');
+const arcadiaapi = require('arcadia-module');
 const cooldownhello = new Set();
 const cooldownbully = new Set();
 const cooldownchill = new Set();
