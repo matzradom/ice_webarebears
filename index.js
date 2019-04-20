@@ -4,7 +4,6 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const snekfetch = require('snekfetch');
-const randomPuppy = require('random-puppy');
 const cooldownhello = new Set();
 const cooldownbully = new Set();
 const cooldownchill = new Set();
