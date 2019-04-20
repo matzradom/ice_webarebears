@@ -292,7 +292,8 @@ bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'triggered'){
         let profilepic = message.author.avatarURL;
-        let imageEmbed = new RichEmbed() .setImage("https://cute-api.tk/v1/generate/triggered?url=" + profilepic) .setColor('RANDOM')
+        let triggeredpic = "https://cute-api.tk/v1/generate/triggered?url=" + profilepic;
+        let imageEmbed = new RichEmbed() .setImage(triggeredpic) .setColor('RANDOM')
                   
         message.channel.send(imageEmbed);
     
