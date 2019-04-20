@@ -288,6 +288,18 @@ bot.on('message' , function(message){
 }});
 
 
+bot.on('message' , function(message){
+        if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + 'trigger'){
+        let profilepic = message.author.avatarURL;
+          
+        message.channel.send({
+        file: {
+            attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
+            name: "triggered.gif"
+
+        }});}});
+
 
 //-------------------------TEXT COMMANDS END---------------------------//
 
