@@ -298,7 +298,7 @@ bot.on('message' , function(message){
             attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
             name: "triggered.gif"}});
 
-});
+};
 
 
 //-------------------------TEXT COMMANDS END---------------------------//
