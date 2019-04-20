@@ -338,7 +338,7 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS END---------------------------//
 
-
+//
 //-------------------------HELP COMMANDS---------------------------//
 
 bot.on('message', message => {
