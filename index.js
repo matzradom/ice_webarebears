@@ -48,7 +48,7 @@ var bears = ["https://i.pinimg.com/564x/6c/66/01/6c6601ee0816cf07271d29c5b5d88b2
              "https://data.whicdn.com/images/326039076/large.jpg",
              
             ]
-var beartext =  ["Raaaaawwrrrrr",
+var text =  ["Raaaaawwrrrrr",
                 "I'm more adorable than you." ,
                 "Beaaaaaaaaaaaaaaar" ,
                 "B- b- buh beaar",
@@ -268,7 +268,7 @@ bot.on('message' , function(message){
         const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
-        .setColor(0xFF0000)
+        .setColor('RANDOM')
         .setDescription("send bear command is set to 3 seconds cooldown. Please wait 3 seconds after your last bully command was sent.")
       
         message.channel.send(embed);
