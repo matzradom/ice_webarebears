@@ -3,6 +3,7 @@ const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
 const bot = new Commando.Client({unknownCommandResponse: false});
 const snekfetch = require('snekfetch');
+const randomPuppy = require('random-puppy');
 const cooldownhello = new Set();
 const cooldownbully = new Set();
 const cooldownchill = new Set();
@@ -286,7 +287,26 @@ bot.on('message' , function(message){
         }     
 }});
 
-
+module.exports.run= async (bot, message, args) => {
+      let reddit = [
+        "webarebears"]
+      let subreddit = reddit[Math.floor(Math.random() * reddit.length - 1)];
+      message.channel.starttyping()
+      randomPuppy(subreddit).then(url => {
+      snekfetch.get(url).then(async res => {
+      await message.channel.send({
+      files: [{
+      attachment: res.body,
+      name: 'meme.png' }]
+      }).then (() => message.channel.stopTyping());
+      }).catch(err => console.error(err));
+      }).catch(err => console.error(err));
+      };
+      module.exports.help = {
+      name: 'meme'
+      aliases:['memes']
+      }
+      
 
 //-------------------------TEXT COMMANDS END---------------------------//
 
