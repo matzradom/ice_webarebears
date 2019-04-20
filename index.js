@@ -290,7 +290,7 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase() == pref + 'send bear'){
+        if(message.content.toLowerCase() == pref + 'triggered'){
         let profilepic = message.author.avatarURL;
 
     message.channel.send({
