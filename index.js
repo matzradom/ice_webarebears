@@ -292,11 +292,11 @@ bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'triggered'){
         let profilepic = message.author.avatarURL;
-
-    message.channel.send({
-        file: {
-            attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
-            name: "triggered.gif"
+        let triggeredpic = "https://cute-api.tk/v1/generate/triggered?url=" + profilepic;
+        let imageEmbed = new RichEmbed() .setImage(sendbear) .setColor('RANDOM')
+                  
+        message.channel.send(imageEmbed);
+    
         }
 });
 
