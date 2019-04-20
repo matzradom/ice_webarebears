@@ -293,7 +293,7 @@ bot.on('message' , function(message){
         if(message.content.toLowerCase() == pref + 'triggered'){
         let profilepic = message.author.avatarURL;
         let triggeredpic = "https://cute-api.tk/v1/generate/triggered?url=" + profilepic;
-        let imageEmbed = new RichEmbed() .setImage(triggeredpic) .setColor('RANDOM')
+        let imageEmbed = new RichEmbed() .setDescription("https://cute-api.tk/v1/generate/triggered?url=" + profilepic) .setImage() .setColor('RANDOM')
                   
         message.channel.send(imageEmbed);
     
