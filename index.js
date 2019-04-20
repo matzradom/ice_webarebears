@@ -290,12 +290,13 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase() == pref + 'triggered'){
+        if(message.content.toLowerCase() == pref + 'trigger'){
         let profilepic = message.author.avatarURL;
-        let triggeredpic = "https://cute-api.tk/v1/generate/triggered?url=" + profilepic;
-        let imageEmbed = new RichEmbed() .setDescription("https://cute-api.tk/v1/generate/triggered?url=" + profilepic) .setImage() .setColor('RANDOM')
-                  
-        message.channel.send(imageEmbed);
+        message.channel.send({
+        file: {
+            attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
+            name: "triggered.gif"
+        }
     
         }
 });
