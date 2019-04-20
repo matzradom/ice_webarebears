@@ -47,7 +47,7 @@ var bears = ["https://i.pinimg.com/564x/6c/66/01/6c6601ee0816cf07271d29c5b5d88b2
              "https://data.whicdn.com/images/326039076/large.jpg",
              
             ]
-var text =  ["Raaaaawwrrrrr",
+var beartext =  ["Raaaaawwrrrrr",
                 "I'm more adorable than you." ,
                 "Beaaaaaaaaaaaaaaar" ,
                 "B- b- buh beaar",
