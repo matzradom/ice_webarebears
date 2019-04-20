@@ -288,22 +288,18 @@ bot.on('message' , function(message){
 }});
 
 
-module.exports.run = async (bot, message, args) => {
-
-    let profilepic = message.author.avatarURL;
+bot.on('message' , function(message){
+        if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + 'send bear'){
+        let profilepic = message.author.avatarURL;
 
     message.channel.send({
         file: {
             attachment: "https://cute-api.tk/v1/generate/triggered?url=" + profilepic,
             name: "triggered.gif"
         }
-    });
+});
 
-};
-
-module.exports.help = {
-    name: 'triggered'
-};
 
 
 //-------------------------TEXT COMMANDS END---------------------------//
