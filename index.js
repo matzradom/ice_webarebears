@@ -267,7 +267,7 @@ bot.on('message' , function(message){
         const embed = new RichEmbed()
        
         .setTitle('Not too fast hooman.')
-        .setColor('RANDOM')
+        .setColor(0xFF0000)
         .setDescription("send bear command is set to 3 seconds cooldown. Please wait 3 seconds after your last bully command was sent.")
       
         message.channel.send(embed);
@@ -276,7 +276,7 @@ bot.on('message' , function(message){
           
         var sendbear = bears[Math.floor(Math.random()*bears.length)]
         var sendbeartext = beartext[Math.floor(Math.random()*beartext.length)]
-        let imageEmbed = new RichEmbed() .setTitle(sendbeartext) .setImage(sendbear) 
+        let imageEmbed = new RichEmbed() .setTitle(sendbeartext) .setImage(sendbear) .setColor('RANDOM')
                   
         message.channel.send(imageEmbed);
       
