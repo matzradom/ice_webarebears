@@ -287,25 +287,45 @@ bot.on('message' , function(message){
         }     
 }});
 
-module.exports.run= async (bot, message, args) => {
-      let reddit = [
-        "webarebears"]
-      let subreddit = reddit[Math.floor(Math.random() * reddit.length - 1)];
-      message.channel.starttyping()
-      randomPuppy(subreddit).then(url => {
-      snekfetch.get(url).then(async res => {
-      await message.channel.send({
-      files: [{
-      attachment: res.body,
-      name: 'meme.png' }]
-      }).then (() => message.channel.stopTyping());
-      }).catch(err => console.error(err));
-      }).catch(err => console.error(err));
-      };
-      module.exports.help = {
-      name: 'meme',
-      aliases:['memes']
-      }
+
+module.exports.run = async (bot, message, args) => {
+
+    let reddit = [
+        "meme",
+        "animemes",
+        "MemesOfAnime",
+        "animememes",
+        "AnimeFunny",
+        "dankmemes",
+        "dankmeme",
+        "wholesomememes",
+        "MemeEconomy",
+        "techsupportanimals",
+        "meirl",
+        "me_irl",
+        "2meirl4meirl",
+        "AdviceAnimals"
+    ]
+
+    let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
+
+    message.channel.startTyping();
+
+    randomPuppy(subreddit).then(async url => {
+            await message.channel.send({
+                files: [{
+                    attachment: url,
+                    name: 'meme.png'
+                }]
+            }).then(() => message.channel.stopTyping());
+    }).catch(err => console.error(err));
+
+};
+
+module.exports.help = {
+    name: 'meme',
+    aliases: ['memes']
+}
       
 
 //-------------------------TEXT COMMANDS END---------------------------//
@@ -338,7 +358,7 @@ bot.on('message' , function(message){
 
 //-------------------------DM COMMANDS END---------------------------//
 
-//
+
 //-------------------------HELP COMMANDS---------------------------//
 
 bot.on('message', message => {
