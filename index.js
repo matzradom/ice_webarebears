@@ -303,7 +303,7 @@ module.exports.run= async (bot, message, args) => {
       }).catch(err => console.error(err));
       };
       module.exports.help = {
-      name: 'meme'
+      name: 'meme',
       aliases:['memes']
       }
       
