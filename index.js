@@ -1,3 +1,4 @@
+//---//
 const Commando = require('discord.js-commando');
 const {Client, RichEmbed} = require('discord.js');
 const client = new Client();
@@ -648,7 +649,7 @@ bot.on('message', message => {
         .setTitle('Rules')
         .setColor(0xFF0000)
         .setDescription("Hi " + message.mentions.users.first()+".")
-                                      .addField("Rule 1.","Will add rules soon.")
+                                      .addField("Rule 1.","Will add rules soon...")
                                       
         .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
