@@ -216,31 +216,6 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase() == pref + "pubg?"){
-        if (cooldownpubg.has(message.author.id)) {
-        const embed = new RichEmbed()
-       
-        .setTitle('Not too fast hooman.')
-        .setColor(0xFF0000)
-        .setDescription("pubg? command is set to 5 seconds cooldown. Please wait 5 seconds after your last bully command was sent.")
-      
-        message.channel.send(embed);
-          
-        } else {
-        var response = pubg[Math.floor(Math.random()*pubg.length)]
-        
-        message.channel.sendMessage(message.author + response).then().catch(console.error);
-          
-        cooldownpubg.add(message.author.id);
-        setTimeout(() => {
-        cooldownpubg.delete(message.author.id);
-        }, 5000);
-        }
-}});
-
-
-bot.on('message' , function(message){
-        if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == bot.user){
         var response = icetag[Math.floor(Math.random()*icetag.length)]
         
@@ -342,7 +317,7 @@ bot.on('message', message => {
         .setTitle('Commands')
         .setColor(0xFF0000)
         .setDescription("\n"+"hello,bully,chill,whisper,info,rules")
-        .addField("Misc Commands","matz,xenon,pubg?,send bear,wake up matz"+"\n")
+        .addField("Misc Commands","matz,xenon,send bear,wake up matz"+"\n")
         .setFooter("ice 'cmd' info | use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         message.channel.send(embed);
@@ -448,21 +423,6 @@ bot.on('message', message => {
         .setColor(0xFF0000)
         .setDescription("Who is Xenon?")
         .addField("Usage","xenon")
-        .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
-        message.channel.send(embed);
-        }
-});
-
-
-bot.on('message', message => {
-        if(message.channel.type ==="dm") return;
-        if(message.content.toLowerCase() == pref + 'pubg? info'){
-        const embed = new RichEmbed()
-       
-        .setTitle('xenon')
-        .setColor(0xFF0000)
-        .setDescription("Maybe I wanna play pubg?")
-        .addField("Usage","pubg?")
         .setFooter("| use ice before each command", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         message.channel.send(embed);
         }
