@@ -13,7 +13,6 @@ const cooldownbears = new Set();
 const cooldownpubg = new Set();
 var xenon = ["Weirdest hooman that had ever lived.", "Xenon? Xenon? Idk him.", "AKA Cheeyin.", "He's actually a nice person. Sometimes."];
 var icetag = ["<a:partyroblob:561806621995433985>", " How bored can you be that you tag me for no reason?", " I don't know what you want. Srsly.", " I know I'm a bot but hoomans are dumb, tag me when you actually want me to do something."];
-var pubg = [" No.", " Play alone.", " I'm sick, I can't carry heavy loads."];
 var bears = ["https://i.pinimg.com/564x/6c/66/01/6c6601ee0816cf07271d29c5b5d88b26.jpg",
              "https://i.pinimg.com/564x/d6/53/ce/d653ce37b5d00a5bb2ce6cf60da01799.jpg", 
              "https://i.pinimg.com/564x/a8/8b/29/a88b29a65568564eccbb70e943f82147.jpg", 
