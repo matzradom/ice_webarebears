@@ -625,9 +625,9 @@ bot.on('message', message => {
         let modRole = message.guild.roles.find("name", "mod");
         if(message.member.roles.has(modRole.id)) {
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
-        var role = message.guild.roles.find(role => role.name === "normie");
+        let muteRole = message.guild.roles.find("name", "normie");
         let membermute = message.mentions.members.first();
-        message.membermute.removeRole(role.id);
+        message.membermute.removeRole(muteRole.id);
         }
         } 
 });
