@@ -615,10 +615,22 @@ bot.on('message', message => {
         }
 });
 
-
-
-
 //-------------------------RULES END---------------------------//
+
+
+//-------------------------MOD COMMANDS---------------------------//
+
+bot.on('message', message => {
+        if(message.channel.type ==="dm") return;
+        if(!message.member.roles.find('name', 'mod') return;
+        if(message.content.toLowerCase() == pref+'mute'+ message.mentions.users.first() ){
+        var role = message.guild.roles.find(role => role.name === "mute");
+        message.mentions.users.first().addRole(role);
+
+      }
+});
+
+//-------------------------MOD END---------------------------//
 bot.login(process.env.token);
 bot.on('ready', () => {
 bot.user.setGame('with twigs. | ice help cmds')})
