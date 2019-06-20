@@ -619,7 +619,6 @@ bot.on('message', message => {
 
 
 //-------------------------RULES END---------------------------//
-socket = io.listen(process.env.PORT);
 bot.login(process.env.token);
 bot.on('ready', () => {
 bot.user.setGame('with twigs. | ice help cmds')})
