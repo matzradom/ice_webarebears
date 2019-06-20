@@ -494,7 +494,7 @@ bot.on('message', message => {
                                       .addField("Rule 9.","Will add rules soon.")
                                       .addField("Rule 10.","Will add rules soon.")
       
-        .setFooter("Rules are for babies.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
+        .setFooter("Rules are for big bois.", "https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setThumbnail("https://i.ibb.co/rp1Ptp8/unnamed-1.png")
         .setTimestamp(new Date())
          message.channel.send(embed);
