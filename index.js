@@ -624,8 +624,8 @@ bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.member.roles.find('name', 'mod')) return;
         if(message.content.toLowerCase() == pref+'mute'+ message.mentions.users.first() ){
-        var role = message.guild.roles.find(role => role.name === "mute");
-        message.mentions.users.first().addRole(role);
+        var role = message.guild.roles.find(role => role.name === "normie");
+        message.mentions.users.first().removeRole(role);
 
       }
 });
