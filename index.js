@@ -622,10 +622,10 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
-        let mod = message.guild.roles.find(role => role.name === "mod");
+        var mod = message.guild.roles.find(role => role.name === "mod");
         if(message.member.roles.has(mod.id)) {
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
-        let role = message.guild.roles.find(role => role.name === "normie");
+        var role = message.guild.roles.find(role => role.name === "normie");
         let member = message.mentions.members.first();
         message.member.removeRole(role).catch(console.error);
         }
