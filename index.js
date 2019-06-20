@@ -622,7 +622,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
         if(message.channel.type ==="dm") return;
-        var modRole = message.guild.roles.find(role => role.name === "mod");
+        let modRole = message.guild.roles.find("name", "mod");
         if(message.member.roles.has(modRole.id)) {
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
         var role = message.guild.roles.find(role => role.name === "normie");
