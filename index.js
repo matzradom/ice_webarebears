@@ -625,10 +625,10 @@ bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
         //let modRole = message.guild.roles.find(role => role.name === "mod");//
-        if(message.author.role.has("592295670120185856")) {
-        let muteRole = message.guild.roles.find(role => role.name === "normie");
+        if(message.author.roles.has('592295670120185856')) {
+        //let muteRole = message.guild.roles.find(role => role.name === "normie");//
         let mutemember = message.guild.member(message.mentions.users.first());
-        message.mutemember.removeRole(muteRole.id);
+        message.mutemember.removeRole('592299660064981017');
         }
         } 
 });
