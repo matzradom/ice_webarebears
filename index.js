@@ -624,7 +624,7 @@ bot.on('message', message => {
        
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
-        let modRole = message.guild.roles.some(role => role.name === "mod");
+        let modRole = message.guild.roles.find(role => role.name === "mod");
         if(message.author.roles.has(modRole.id)) {
         
         let muteRole = message.guild.roles.find(role => role.name === "normie");
@@ -637,7 +637,7 @@ bot.on('message', message => {
 //-------------------------MOD END---------------------------//
 bot.login(process.env.token);
 bot.on('ready', () => {
-bot.user.setGame('with twigs. | ice help cmds')})
+bot.user.setActivity('with twigs. | ice help cmds')})
 bot.on('ready',function(){
 console.log("I'm ready")
 });
