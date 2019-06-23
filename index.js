@@ -620,7 +620,7 @@ bot.on('message', message => {
 
 //-------------------------MOD COMMANDS---------------------------//
 
-bot.on('message', message => {
+module.exports.run = async (bot, message, args) => {
         if(message.channel.type ==="dm") return;
         var modRole = message.guild.roles.find(role => role.name === "mod");
         let member = message.author();
@@ -632,6 +632,8 @@ bot.on('message', message => {
         }
         } 
 });
+
+
 
 //-------------------------MOD END---------------------------//
 bot.login(process.env.token);
