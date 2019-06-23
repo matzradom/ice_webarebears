@@ -625,11 +625,11 @@ bot.on('message', message => {
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
         var modRole = message.guild.roles.find(role => role.name === "mod");
-        const mod = message.author;
-        if(message.member.roles.has(modRole.id)) {
+        const mod = message.guild.member(message.author());
+        if(message.mod.roles.has(modRole.id)) {
         
         var muteRole = message.guild.roles.find(role => role.name === "normie");
-        const mutemember = message.mentions.users.first();
+        let mutemember = message.guild.member(message.mentions.users.first());
         mutemember.removeRole(muteRole);
         }
         } 
