@@ -624,9 +624,8 @@ bot.on('message', message => {
        
         if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref+'mute '+ message.mentions.users.first() ){
-        let modRole = message.guild.roles.find(role => role.name === "mod");
+        //let modRole = message.guild.roles.find(role => role.name === "mod");//
         if(message.author.roles.has(modRole.id)) {
-        
         let muteRole = message.guild.roles.find(role => role.name === "normie");
         let mutemember = message.guild.member(message.mentions.users.first());
         mutemember.removeRole(muteRole.id);
