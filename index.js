@@ -156,6 +156,18 @@ bot.on('message' , function(message){
 
 bot.on('message' , function(message){
         if(message.channel.type ==="dm") return;
+        if(message.content.toLowerCase() == pref + 'get'){
+        
+         const emoji = bot.emojis.get(emojiID);
+         
+         message.channel.sendMessage("https://cdn.discordapp.com/emojis/${emoji.id}.gif");}
+     
+        
+}});
+
+
+bot.on('message' , function(message){
+        if(message.channel.type ==="dm") return;
         if(message.content.toLowerCase() == pref + 'info'){
         if (cooldowninfo.has(message.author.id)) {
         const embed = new RichEmbed()
